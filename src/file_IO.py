@@ -1,5 +1,5 @@
-def parse(filePath: str):
-    with open(filePath, "r") as file:
+def parse(file_path: str):
+    with open(file_path, "r") as file:
         # First line: I J T
         I, J, T = [int(x) for x in file.readline().split()]
 
