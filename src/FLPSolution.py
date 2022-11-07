@@ -1,7 +1,11 @@
 from FLPData import FLPData
+from pathlib import Path
 
 
 class FLPSolution:
+    __BASE_DIR = Path(__file__).resolve().parent.parent
+    __SOLUTION_DIR = str(__BASE_DIR) + "/solution/"
+
     def __init__(
         self,
         instance: FLPData,
@@ -35,3 +39,22 @@ class FLPSolution:
         customersPeriod = [0 for _ in range(self.instance.J)]
         # TODO: implement this method
         return customersPeriod
+
+    def write(self):
+        # the first line is the total cost of the solution, then
+        # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
+        # a line for each customer (starting at 1) and the period from which the customer is covered
+        file_path = self.__SOLUTION_DIR + self.instance.name + "_result.txt"
+        with open(file_path, "w") as file:
+            file.write(str(self.objective_value))
+            sitesPeriod = self.getSitesPeriod()
+            for i in range(self.instance.I):
+                file.write(f"\n{i + 1} {sitesPeriod[i]}")
+
+            customersPeriod = self.getCustomersPeriod()
+            for j in range(self.instance.J):
+                file.write(f"\n{j + 1} {customersPeriod[j]}")
+
+            file.close()
+
+        print(f"Solution written to {file_path}")

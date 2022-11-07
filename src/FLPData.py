@@ -1,21 +1,33 @@
 class FLPData:
-    def __init__(
-        self,
-        I: int,
-        J: int,
-        T: int,
-        n: list(),
-        p: list(),
-        f: list([list()]),
-        c: list([list([list()])]),
-    ):
-        self.I = I  # number of sites (i = 0, 1, ..., I-1)
-        self.J = J  # number of customers (j = 0, 1, ..., J-1)
-        self.T = T  # number of time (t = 0, 1, ..., T-1)
-        self.n = n  # number of customers to be served at time t (t = 0, 1, ..., T-1)
-        self.p = p  # number of sites to be opened at time t (t = 0, 1, ..., T-1)
-        self.f = f  # fixed cost of opening a site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1)
-        self.c = c  # cost of serving a customer j (j = 0, 1, ..., J-1) from site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1)
+    def __parse__(file_path: str):
+        with open(file_path, "r") as file:
+            # First line: I J T
+            I, J, T = [int(x) for x in file.readline().split()]
+
+            # Second line: values of p for t = 0, 1, ..., T-1
+            p = [int(x) for x in file.readline().split()]
+
+            # Third line: values of n for t = 0, 1, ..., T-1
+            n = [int(x) for x in file.readline().split()]
+
+            # From fourth line: a block of lines for every i = 0, 1, ..., I-1
+            f = [[0 for _ in range(T)] for _ in range(I)]
+            c = [[[0 for _ in range(T)] for _ in range(J)] for _ in range(I)]
+
+            for i in range(I):
+                # First line of each block: values of f for t = 0, 1, ..., T-1
+                f[i] = [int(x) for x in file.readline().split()]
+
+                # Then, a line for every j: values of c for t = 0, 1, ..., T-1
+                for j in range(J):
+                    c[i][j] = [int(x) for x in file.readline().split()]
+
+        return I, J, T, n, p, f, c
+
+    def __init__(self, file_path: str):
+        self.I, self.J, self.T, self.n, self.p, self.f, self.c = FLPData.__parse__(
+            file_path
+        )
         self.name = f"I{self.I}-J{self.J}-T{self.T}"
 
     def __str__(self):

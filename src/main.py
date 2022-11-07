@@ -1,5 +1,4 @@
 import sys
-import file_IO
 from FLPData import FLPData
 from FLPMIPModel import FLPMIPModel
 
@@ -19,13 +18,12 @@ def main():
     if len(argv) == 3:
         time_limit = int(argv[2])
 
-    I, J, T, n, p, f, c = file_IO.parse(file_path)
-    instance = FLPData(I, J, T, n, p, f, c)
+    instance = FLPData(file_path=file_path)
 
     if method == "MIP":
-        model = FLPMIPModel(instance)
+        model = FLPMIPModel(instance=instance)
         solution = model.solve(time_limit=time_limit)
-        file_IO.write(instance.name, solution)
+        solution.write()
     elif method == "H":
         print("Method not implemented yet!")
     else:

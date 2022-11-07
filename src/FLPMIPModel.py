@@ -87,10 +87,10 @@ class FLPMIPModel:
         # Get solution
         if status == mip.OptimizationStatus.OPTIMAL:
             return FLPSolution(
-                self.instance, self.model.objective_value, self.x, self.y
+                self.instance, int(self.model.objective_value), self.x, self.y
             )
         else:
-            return FLPSolution(self.instance, float("inf"), self.x, self.y)
+            return FLPSolution(self.instance, int("inf"), self.x, self.y)
 
     def __str__(self):
         return f"FLPMIPModel(instance={self.instance})"
