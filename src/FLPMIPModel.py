@@ -12,7 +12,7 @@ class FLPMIPModel:
         self.x = [
             [
                 [
-                    self.model.add_var(name=f"x_{i}_{j}_{t}", var_type=mip.INTEGER)
+                    self.model.add_var(name=f"x_{i}_{j}_{t}", var_type=mip.CONTINUOUS)
                     for t in range(instance.T)
                 ]
                 for j in range(instance.J)

@@ -1,3 +1,10 @@
+from FLPSolution import FLPSolution
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+SOLUTION_DIR = str(BASE_DIR) + "/solution/"
+
+
 def parse(file_path: str):
     with open(file_path, "r") as file:
         # First line: I J T
@@ -22,3 +29,24 @@ def parse(file_path: str):
                 c[i][j] = [int(x) for x in file.readline().split()]
 
         return I, J, T, n, p, f, c
+
+
+def write(instance_name: str, solution: FLPSolution):
+    # the first line is the total cost of the solution, then
+    # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
+    # a line for each customer (starting at 1) and the period from which the customer is covered
+
+    file_path = SOLUTION_DIR + instance_name + "_result.txt"
+    with open(file_path, "w") as file:
+        file.write(str(int(solution.objective_value)))
+        sitesPeriod = solution.getSitesPeriod()
+        for i in range(solution.instance.I):
+            file.write(f"\n{i + 1} {sitesPeriod[i]}")
+
+        customersPeriod = solution.getCustomersPeriod()
+        for j in range(solution.instance.J):
+            file.write(f"\n{j + 1} {customersPeriod[j]}")
+
+        file.close()
+
+    print(f"Solution written to {file_path}")

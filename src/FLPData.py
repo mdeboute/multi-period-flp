@@ -16,6 +16,7 @@ class FLPData:
         self.p = p  # number of sites to be opened at time t (t = 0, 1, ..., T-1)
         self.f = f  # fixed cost of opening a site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1)
         self.c = c  # cost of serving a customer j (j = 0, 1, ..., J-1) from site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1)
+        self.name = f"I{self.I}-J{self.J}-T{self.T}"
 
     def __str__(self):
         return f"FLPData(I={self.I}, J={self.J}, T={self.T})"
