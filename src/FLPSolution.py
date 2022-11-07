@@ -41,11 +41,13 @@ class FLPSolution:
         return customersPeriod
 
     def write(self):
-        # the first line is the total cost of the solution, then
-        # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
-        # a line for each customer (starting at 1) and the period from which the customer is covered
+        # create a __SOLUTION_DIR if it does not exist
+        Path(self.__SOLUTION_DIR).mkdir(parents=True, exist_ok=True)
         file_path = self.__SOLUTION_DIR + self.instance.name + "_result.txt"
         with open(file_path, "w") as file:
+            # the first line is the total cost of the solution, then
+            # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
+            # a line for each customer (starting at 1) and the period from which the customer is covered
             file.write(str(self.objective_value))
             sitesPeriod = self.getSitesPeriod()
             for i in range(self.instance.I):
