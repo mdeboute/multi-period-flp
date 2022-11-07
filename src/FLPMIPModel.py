@@ -30,13 +30,12 @@ class FLPMIPModel:
 
         # Objective function
         self.model.objective = mip.xsum(
-            mip.xsum(self.instance.f[i][t] * self.y[i][t] for t in range(instance.T))
+            mip.xsum(instance.f[i][t] * self.y[i][t] for t in range(instance.T))
             for i in range(instance.I)
         ) + mip.xsum(
             mip.xsum(
                 mip.xsum(
-                    self.instance.c[i][j][t] * self.x[i][j][t]
-                    for t in range(instance.T)
+                    instance.c[i][j][t] * self.x[i][j][t] for t in range(instance.T)
                 )
                 for j in range(instance.J)
             )
@@ -51,12 +50,21 @@ class FLPMIPModel:
         for t in range(instance.T):
             for i in range(instance.I):
                 self.model += mip.xsum(self.x[i][j][t] for j in range(instance.J)) <= (
-                    self.instance.n[t] * self.y[i][t]
+                    instance.J * self.y[i][t]
                 )
 
         for t in range(instance.T):
             self.model += (
-                mip.xsum(self.y[i][t] for i in range(instance.I)) == self.instance.p[t]
+                mip.xsum(
+                    mip.xsum(self.x[i][j][t] for j in range(instance.J))
+                    for i in range(instance.I)
+                )
+                >= instance.n[t]
+            )
+
+        for t in range(instance.T):
+            self.model += (
+                mip.xsum(self.y[i][t] for i in range(instance.I)) == instance.p[t]
             )
 
     def solve(
@@ -83,3 +91,9 @@ class FLPMIPModel:
             )
         else:
             return FLPSolution(self.instance, float("inf"), self.x, self.y)
+
+    def __str__(self):
+        return f"FLPMIPModel(instance={self.instance})"
+
+    def __repr__(self):
+        return self.__str__()
