@@ -130,3 +130,6 @@ dmypy.json
 
 # Output directory
 solution/
+
+# Visual Studio
+.vs/
