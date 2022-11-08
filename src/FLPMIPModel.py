@@ -60,10 +60,8 @@ class FLPMIPModel:
             )
 
         for i in range(instance.I):
-            self.model += self.z[i][0] == 0
-
-        for t in range(instance.T):
-            for i in range(instance.I):
+            self.model += self.z[i][0] == self.y[i][0]
+            for t in range(1, instance.T):
                 self.model += self.z[i][t] == self.y[i][t] + self.z[i][t - 1]
 
         for t in range(instance.T):
