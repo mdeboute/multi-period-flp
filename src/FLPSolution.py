@@ -26,21 +26,28 @@ class FLPSolution:
     def __repr__(self):
         return self.__str__()
 
-    def __getSitesPeriod__(self):
-        sitesPeriod = [0 for _ in range(self.instance.I)]
+    def __get_sites_period__(self):
+        # we want to know from which period each site is open
+        # example: [2, 1, 1, 2] means that site 0 is open from period 2, site 1 from period 1, site 2 from period 1 and site 3 from period 2
+        sites_period = [0 for _ in range(self.instance.I)]
         for i in range(self.instance.I):
             for t in range(self.instance.T):
-                if self.y[i][t].x == 1 and sitesPeriod[i] == 0:
-                    sitesPeriod[i] = t + 1
+                if self.z[i][t].x == 1 and sites_period[i] == 0:
+                    sites_period[i] = t + 1
                     break
-        return sitesPeriod
+        return sites_period
 
-    def __getCustomersPeriod__(self):
+    def __get_customers_period__(self):
         # we want to know from which period each customer is covered
         # example: [2, 1, 1, 2] means that customer 0 is covered from period 2, customer 1 from period 1, customer 2 from period 1 and customer 3 from period 2
-        customersPeriod = [0 for _ in range(self.instance.J)]
-        # TODO: implement this method
-        return customersPeriod
+        customers_period = [0 for _ in range(self.instance.J)]
+        for j in range(self.instance.J):
+            for t in range(self.instance.T):
+                for i in range(self.instance.I):
+                    if self.x[i][j][t].x == 1 and customers_period[j] == 0:
+                        customers_period[j] = t + 1
+                        break
+        return customers_period
 
     def write(self):
         # create a __SOLUTION_DIR if it does not exist
@@ -51,13 +58,13 @@ class FLPSolution:
             # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
             # a line for each customer (starting at 1) and the period from which the customer is covered
             file.write(str(self.objective_value))
-            sitesPeriod = self.__getSitesPeriod__()
+            sites_period = self.__get_sites_period__()
             for i in range(self.instance.I):
-                file.write(f"\n{i + 1} {sitesPeriod[i]}")
+                file.write(f"\n{i + 1} {sites_period[i]}")
 
-            customersPeriod = self.__getCustomersPeriod__()
+            customers_period = self.__get_customers_period__()
             for j in range(self.instance.J):
-                file.write(f"\n{j + 1} {customersPeriod[j]}")
+                file.write(f"\n{j + 1} {customers_period[j]}")
 
             file.close()
 
