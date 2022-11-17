@@ -73,6 +73,14 @@ class FLPMIPModel:
                 >= instance.n[t]
             )
 
+        for j in range(instance.J):
+            for t in range(1, instance.T):
+                self.model += (
+                    mip.xsum(self.x[i][j][t] for i in range(instance.I))
+                    - mip.xsum(self.x[i][j][t-1] for i in range(instance.I))
+                    >= 0
+                )
+
         for t in range(instance.T):
             for j in range(instance.J):
                 for i in range(instance.I):
