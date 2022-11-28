@@ -1,6 +1,7 @@
 import sys
 from FLPData import FLPData
 from FLPMIPModel import FLPMIPModel
+from FLPHeuristic import FLPHeuristic
 
 
 def main():
@@ -25,7 +26,8 @@ def main():
         solution = model.solve(time_limit=time_limit)
         solution.write()
     elif method == "H":
-        print("Method not implemented yet!")
+        model = FLPHeuristic(instance=instance)
+        print(model.solve())
     else:
         print("Unknown method: " + method)
         print("Available methods: MIP, H")

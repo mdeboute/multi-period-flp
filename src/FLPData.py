@@ -1,5 +1,5 @@
 class FLPData:
-    def __parse__(file_path: str):
+    def _parse(file_path: str):
         try:
             with open(file_path, "r") as file:
                 # First line: I J T
@@ -28,15 +28,11 @@ class FLPData:
             print(f"ERROR: {e}")
             exit(1)
 
-    def __get_name__(file_path: str):
-        # split the string by the last occurrence of the character "/" and get the string before .txt
-        return file_path.rsplit("/", 1)[1].split(".")[0]
-
     def __init__(self, file_path: str):
-        self.I, self.J, self.T, self.n, self.p, self.f, self.c = FLPData.__parse__(
+        self.I, self.J, self.T, self.n, self.p, self.f, self.c = FLPData._parse(
             file_path
         )
-        self.name = FLPData.__get_name__(file_path)
+        self.name = file_path.rsplit("/", 1)[1].split(".")[0]
 
     def __str__(self):
         return f"{self.name}"

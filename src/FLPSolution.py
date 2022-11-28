@@ -3,8 +3,8 @@ from pathlib import Path
 
 
 class FLPSolution:
-    __BASE_DIR = Path(__file__).resolve().parent.parent
-    __SOLUTION_DIR = str(__BASE_DIR) + "/solution/"
+    _BASE_DIR = Path(__file__).resolve().parent.parent
+    _SOLUTION_DIR = str(_BASE_DIR) + "/solution/"
 
     def __init__(
         self,
@@ -26,7 +26,7 @@ class FLPSolution:
     def __repr__(self):
         return self.__str__()
 
-    def __get_sites_period__(self):
+    def _get_sites_period(self):
         # we want to know from which period each site is open
         # example: [2, 1, 1, 2] means that site 0 is open from period 2, site 1 from period 1, site 2 from period 1 and site 3 from period 2
         sites_period = [0 for _ in range(self.instance.I)]
@@ -37,7 +37,7 @@ class FLPSolution:
                     break
         return sites_period
 
-    def __get_customers_period__(self):
+    def _get_customers_period(self):
         # we want to know from which period each customer is covered
         # example: [2, 1, 1, 2] means that customer 0 is covered from period 2, customer 1 from period 1, customer 2 from period 1 and customer 3 from period 2
         customers_period = [0 for _ in range(self.instance.J)]
@@ -51,18 +51,18 @@ class FLPSolution:
 
     def write(self):
         # create a __SOLUTION_DIR if it does not exist
-        Path(self.__SOLUTION_DIR).mkdir(parents=True, exist_ok=True)
-        file_path = self.__SOLUTION_DIR + self.instance.name + "_result.txt"
+        Path(self._SOLUTION_DIR).mkdir(parents=True, exist_ok=True)
+        file_path = self._SOLUTION_DIR + self.instance.name + "_result.txt"
         with open(file_path, "w") as file:
             # the first line is the total cost of the solution, then
             # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)
             # a line for each customer (starting at 1) and the period from which the customer is covered
             file.write(str(self.objective_value))
-            sites_period = self.__get_sites_period__()
+            sites_period = self._get_sites_period()
             for i in range(self.instance.I):
                 file.write(f"\n{i + 1} {sites_period[i]}")
 
-            customers_period = self.__get_customers_period__()
+            customers_period = self._get_customers_period()
             for j in range(self.instance.J):
                 file.write(f"\n{j + 1} {customers_period[j]}")
 
