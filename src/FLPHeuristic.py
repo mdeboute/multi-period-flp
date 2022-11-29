@@ -25,9 +25,10 @@ class FLPHeuristic:
 
             # open the first p_t sites but only if they are not already open
             for i in range(self.instance.p[t]):
-                open_sites[sites[i][0]][t] = 1
-                # delete the site from the list
-                del sites[i]
+                if open_sites[sites[i][0]][t] == 0:
+                    open_sites[sites[i][0]][t] = 1
+                    # delete the site from the list
+                    del sites[i]
 
         return open_sites
 
@@ -64,6 +65,7 @@ class FLPHeuristic:
             customers.sort(key=lambda x: x[1])
 
             # assign the first n_t customers if they are not already assigned
+            # customers are assigned at most once
             for j in range(self.instance.n[t]):
                 if assignments[customers[j][0]][t] == 0:
                     assignments[customers[j][0]][t] = 1

@@ -59,7 +59,7 @@ class FLPSolution:
                     sum_x += self.x[i][j][t]
                 if sum_x > 1:
                     print(
-                        f"ERROR: for customer {j} at period {t}, the sum of x[i][j][t] is {sum_x} > 1"
+                        f"ERROR: for customer {j} at period {t}, the sum of x[i][j][t] on i is {sum_x} > 1"
                     )
                     return False
 
@@ -81,7 +81,7 @@ class FLPSolution:
                     sum_x += self.x[i][j][t]
             if sum_x < self.instance.n[t]:
                 print(
-                    f"ERROR: for period {t}, the sum of x[i][j][t] is {sum_x} < n[t] = {self.instance.n[t]}"
+                    f"ERROR: for period {t}, the sum of x[i][j][t] on i and j is {sum_x} < n[t] = {self.instance.n[t]}"
                 )
                 return False
 
@@ -108,7 +108,7 @@ class FLPSolution:
                 sum_y += self.y[i][t]
             if sum_y != self.instance.p[t]:
                 print(
-                    f"ERROR: for period {t}, the sum of y[i][t] is {sum_y} != p[t] = {self.instance.p[t]}"
+                    f"ERROR: for period {t}, the sum of y[i][t] on i is {sum_y} != p[t] = {self.instance.p[t]}"
                 )
                 return False
 
@@ -118,7 +118,7 @@ class FLPSolution:
             for t in range(self.instance.T):
                 sum_y += self.y[i][t]
             if sum_y > 1:
-                print(f"ERROR: for site {i}, the sum of y[i][t] is {sum_y} > 1")
+                print(f"ERROR: for site {i}, the sum of y[i][t] on t is {sum_y} > 1")
                 return False
 
         # 7. check that for each customer, for each period (except the first one), the sum on i of x[i][j][t] >= x[i][j][t-1]
@@ -132,7 +132,7 @@ class FLPSolution:
                     sum_x_prev += self.x[i][j][t - 1]
                 if sum_x < sum_x_prev:
                     print(
-                        f"ERROR: for customer {j} at period {t}, the sum of x[i][j][t] is {sum_x} < the sum of x[i][j][t-1] = {sum_x_prev}"
+                        f"ERROR: for customer {j} at period {t}, the sum of x[i][j][t] on i is {sum_x} < the sum of x[i][j][t-1] on i = {sum_x_prev}"
                     )
                     return False
 
