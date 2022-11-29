@@ -1,5 +1,6 @@
 from FLPData import FLPData
 from FLPSolution import FLPSolution
+import time
 
 
 class FLPHeuristic:
@@ -111,20 +112,29 @@ class FLPHeuristic:
 
         return x, y, z
 
-    def solve(self):
-        # solve the open sites problem
-        open_sites = self._solve_open_sites()
+    def solve(self, time_limit: int = 600):
+        # start the timer
+        _start_time = time.time()
 
-        # compute the assignment cost
-        assignment_cost = self._get_assignement_cost(open_sites)
+        while time.time() - _start_time < time_limit:
+            # solve the open sites problem
+            open_sites = self._solve_open_sites()
 
-        # solve the assignment problem
-        assignments = self._solve_assignement(assignment_cost)
+            # compute the assignment cost
+            assignment_cost = self._get_assignement_cost(open_sites)
 
-        # compute the objective value
-        objective_value = self._get_objective_value(open_sites, assignments)
+            # solve the assignment problem
+            assignments = self._solve_assignement(assignment_cost)
 
-        # create the solution
-        x, y, z = self._create_solution(open_sites, assignments)
+            # compute the objective value
+            objective_value = self._get_objective_value(open_sites, assignments)
 
-        return FLPSolution(self.instance, objective_value, x, y, z)
+            print("Solution found in {0:.2f} seconds".format(time.time() - _start_time))
+
+            # create the solution
+            x, y, z = self._create_solution(open_sites, assignments)
+
+            return FLPSolution(self.instance, objective_value, x, y, z)
+
+        print("No solution found in {0:.2f} seconds".format(time.time() - _start_time))
+        exit(1)
