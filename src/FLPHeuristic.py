@@ -25,10 +25,9 @@ class FLPHeuristic:
 
             # open the first p_t sites but only if they are not already open
             for i in range(self.instance.p[t]):
-                if open_sites[sites[i][0]][t] == 0:
-                    open_sites[sites[i][0]][t] = 1
-                    # delete the site from the list
-                    del sites[i]
+                open_sites[sites[i][0]][t] = 1
+                # delete the site from the list
+                del sites[i]
 
         return open_sites
 
