@@ -16,6 +16,7 @@ class FLPHeuristic:
         open_sites = [
             [0 for _ in range(self.instance.T)] for _ in range(self.instance.I)
         ]
+
         unopened_sites = [i for i in range(self.instance.I)]
 
         # for each period
@@ -26,11 +27,10 @@ class FLPHeuristic:
 
             # open the first p_t sites but only if they are not already open
             for i in range(self.instance.p[t]):
-                cheap_site = sites[i][0]
-                for ts in range(t, self.instance.T):
-                    open_sites[cheap_site][ts] = 1
+                for t_ in range(t, self.instance.T):
+                    open_sites[sites[i][0]][t_] = 1
                 # delete the site from the list
-                unopened_sites.remove(cheap_site)
+                unopened_sites.remove(sites[i][0])
 
         return open_sites
 
@@ -78,11 +78,11 @@ class FLPHeuristic:
         # compute the objective value
         objective_value = 0
 
-        # opening cost
+        # opening cost (we only count this cost once per sites opened)
         for i in range(self.instance.I):
             for t in range(self.instance.T):
                 if open_sites[i][t] == 1:
-                    objective_value += self.instance.f[i][t] * open_sites[i][t]
+                    objective_value += self.instance.f[i][t]
                     break
 
         # assignment cost
@@ -106,7 +106,10 @@ class FLPHeuristic:
                         least_cost_site = -1
                         least_cost = 0
                         for i in range(self.instance.I):
-                            if open_sites[i][nt] == 1 and (self.instance.c[i][j][nt] < least_cost or least_cost_site == -1):
+                            if open_sites[i][nt] == 1 and (
+                                self.instance.c[i][j][nt] < least_cost
+                                or least_cost_site == -1
+                            ):
                                 least_cost = self.instance.c[i][j][nt]
                                 least_cost_site = i
                         if least_cost_site != -1:
@@ -143,7 +146,11 @@ class FLPHeuristic:
             assignments = self._solve_assignement(assignment_cost)
 
             # compute the objective value
-            objective_value = self._get_objective_value(open_sites, assignments, assignment_cost)
+            objective_value = self._get_objective_value(
+                open_sites,
+                assignments,
+                assignment_cost,
+            )
 
             print("Solution found in {0:.2f} seconds".format(time.time() - _start_time))
 
