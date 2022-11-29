@@ -32,7 +32,7 @@ class FLPData:
         self.I, self.J, self.T, self.n, self.p, self.f, self.c = FLPData._parse(
             file_path
         )
-        self.name = file_path.rsplit("/", 1)[1].split(".")[0]
+        self.name = file_path.rsplit("data", 1)[1].split(".")[0][1:]
 
     def __str__(self):
         return f"{self.name}"

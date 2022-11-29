@@ -88,8 +88,9 @@ class FLPHeuristic:
         # assignment cost
         for j in range(self.instance.J):
             for t in range(self.instance.T):
-                objective_value += assignment_cost[j][t] * assignments[j][t]
-
+                if assignments[j][t] == 1:
+                    objective_value += assignment_cost[j][t] * assignments[j][t]
+                    break
         return objective_value
 
     def _create_solution(self, open_sites, assignments):
