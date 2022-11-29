@@ -16,18 +16,21 @@ class FLPHeuristic:
         open_sites = [
             [0 for _ in range(self.instance.T)] for _ in range(self.instance.I)
         ]
+        unopened_sites = [i for i in range(self.instance.I)]
 
         # for each period
         for t in range(self.instance.T):
             # create a list of tuples (site, opening cost) and sort it by opening cost
-            sites = [(i, self.instance.f[i][t]) for i in range(self.instance.I)]
+            sites = [(i, self.instance.f[i][t]) for i in unopened_sites]
             sites.sort(key=lambda x: x[1])
 
             # open the first p_t sites but only if they are not already open
             for i in range(self.instance.p[t]):
-                open_sites[sites[i][0]][t] = 1
+                cheap_site = sites[i][0]
+                for ts in range(t, self.instance.T):
+                    open_sites[cheap_site][ts] = 1
                 # delete the site from the list
-                del sites[i]
+                unopened_sites.remove(cheap_site)
 
         return open_sites
 
@@ -71,19 +74,21 @@ class FLPHeuristic:
 
         return assignments
 
-    def _get_objective_value(self, open_sites, assignments):
+    def _get_objective_value(self, open_sites, assignments, assignment_cost):
         # compute the objective value
         objective_value = 0
 
         # opening cost
         for i in range(self.instance.I):
             for t in range(self.instance.T):
-                objective_value += self.instance.f[i][t] * open_sites[i][t]
+                if open_sites[i][t] == 1:
+                    objective_value += self.instance.f[i][t] * open_sites[i][t]
+                    break
 
         # assignment cost
         for j in range(self.instance.J):
             for t in range(self.instance.T):
-                objective_value += self.instance.c[i][j][t] * assignments[j][t]
+                objective_value += assignment_cost[j][t] * assignments[j][t]
 
         return objective_value
 
@@ -94,22 +99,32 @@ class FLPHeuristic:
             for _ in range(self.instance.I)
         ]
 
-        for i in range(self.instance.I):
+        for t in range(self.instance.T):
             for j in range(self.instance.J):
-                for t in range(self.instance.T):
-                    if open_sites[i][t] == 1 and assignments[j][t] == 1:
-                        x[i][j][t] = 1
-
-        # y[i][t] = 1 if we open site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
-        y = open_sites
+                if assignments[j][t] == 1:
+                    for nt in range(t, self.instance.T):
+                        least_cost_site = -1
+                        least_cost = 0
+                        for i in range(self.instance.I):
+                            if open_sites[i][nt] == 1 and (self.instance.c[i][j][nt] < least_cost or least_cost_site == -1):
+                                least_cost = self.instance.c[i][j][nt]
+                                least_cost_site = i
+                        if least_cost_site != -1:
+                            x[least_cost_site][j][nt] = 1
+                        else:
+                            print("Failed to assign customer", j, "at period", nt)
 
         # z[i][t] = 1 if site i (i = 0, 1, ..., I-1) is open at time t (t = 0, 1, ..., T-1), 0 otherwise
-        z = [[0 for _ in range(self.instance.T)] for _ in range(self.instance.I)]
+        z = open_sites
+
+        # y[i][t] = 1 if we open site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
+        y = [[0 for _ in range(self.instance.T)] for _ in range(self.instance.I)]
 
         for i in range(self.instance.I):
             for t in range(self.instance.T):
-                if sum(y[i][t:]) >= 1:
-                    z[i][t] = 1
+                if z[i][t] == 1:
+                    y[i][t] = 1
+                    break
 
         return x, y, z
 
@@ -128,7 +143,7 @@ class FLPHeuristic:
             assignments = self._solve_assignement(assignment_cost)
 
             # compute the objective value
-            objective_value = self._get_objective_value(open_sites, assignments)
+            objective_value = self._get_objective_value(open_sites, assignments, assignment_cost)
 
             print("Solution found in {0:.2f} seconds".format(time.time() - _start_time))
 
