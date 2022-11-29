@@ -42,11 +42,11 @@ class FLPHeuristic:
             for t in range(self.instance.T):
                 assignment_cost[j][t] = sum(
                     min(
-                        self.instance.c[i][j][_t]
+                        self.instance.c[i][j][t_]
                         for i in range(self.instance.I)
-                        if open_sites[i][_t] == 1
+                        if open_sites[i][t_] == 1
                     )
-                    for _t in range(t, self.instance.T)
+                    for t_ in range(t, self.instance.T)
                 )
 
         return assignment_cost
