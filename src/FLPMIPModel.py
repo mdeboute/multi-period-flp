@@ -93,6 +93,28 @@ class FLPMIPModel:
         for i in range(instance.I):
             self.model += mip.xsum(self.y[i][t] for t in range(instance.T)) <= 1
 
+    def _create_solution(self):
+        # copy lists of variables to lists of values
+        x = [
+            [
+                [self.x[i][j][t].x for t in range(self.instance.T)]
+                for j in range(self.instance.J)
+            ]
+            for i in range(self.instance.I)
+        ]
+
+        y = [
+            [self.y[i][t].x for t in range(self.instance.T)]
+            for i in range(self.instance.I)
+        ]
+
+        z = [
+            [self.z[i][t].x for t in range(self.instance.T)]
+            for i in range(self.instance.I)
+        ]
+
+        return x, y, z
+
     def solve(
         self,
         solver_name: str = "GRB",
@@ -108,15 +130,18 @@ class FLPMIPModel:
         self.model.threads = nb_threads
 
         # Solve model
-        status = self.model.optimize()
+        _status = self.model.optimize()
+
+        # Create solution
+        _x, _y, _z = self._create_solution()
 
         # Get solution
-        if status == mip.OptimizationStatus.OPTIMAL:
+        if _status == mip.OptimizationStatus.OPTIMAL:
             return FLPSolution(
-                self.instance, int(self.model.objective_value), self.x, self.y, self.z
+                self.instance, int(self.model.objective_value), _x, _y, _z
             )
         else:
-            return FLPSolution(self.instance, float("inf"), self.x, self.y, self.z)
+            return FLPSolution(self.instance, float("inf"), _x, _y, _z)
 
     def __str__(self):
         return f"FLPMIPModel(instance={self.instance})"

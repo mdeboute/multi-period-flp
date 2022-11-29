@@ -24,10 +24,17 @@ def main():
     if method == "MIP":
         model = FLPMIPModel(instance=instance)
         solution = model.solve(time_limit=time_limit)
-        solution.write()
+        if solution.check_feasibility():
+            solution.write()
+        else:
+            print("The solution is not feasible!")
     elif method == "H":
         model = FLPHeuristic(instance=instance)
-        print(model.solve())
+        solution = model.solve()
+        if solution.check_feasibility():
+            solution.write()
+        else:
+            print("The solution is not feasible!")
     else:
         print("Unknown method: " + method)
         print("Available methods: MIP, H")

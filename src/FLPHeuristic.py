@@ -1,4 +1,5 @@
 from FLPData import FLPData
+from FLPSolution import FLPSolution
 
 
 class FLPHeuristic:
@@ -84,6 +85,32 @@ class FLPHeuristic:
 
         return objective_value
 
+    def _create_solution(self, open_sites, assignments):
+        # x[i][j][t] = 1 if we affect the customer j (j = 0, 1, ..., J-1) to the site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
+        x = [
+            [[0 for _ in range(self.instance.T)] for _ in range(self.instance.J)]
+            for _ in range(self.instance.I)
+        ]
+
+        for i in range(self.instance.I):
+            for j in range(self.instance.J):
+                for t in range(self.instance.T):
+                    if open_sites[i][t] == 1 and assignments[j][t] == 1:
+                        x[i][j][t] = 1
+
+        # y[i][t] = 1 if we open site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
+        y = open_sites
+
+        # z[i][t] = 1 if site i (i = 0, 1, ..., I-1) is open at time t (t = 0, 1, ..., T-1), 0 otherwise
+        z = [[0 for _ in range(self.instance.T)] for _ in range(self.instance.I)]
+
+        for i in range(self.instance.I):
+            for t in range(self.instance.T):
+                if sum(y[i][t:]) >= 1:
+                    z[i][t] = 1
+
+        return x, y, z
+
     def solve(self):
         # solve the open sites problem
         open_sites = self._solve_open_sites()
@@ -97,4 +124,7 @@ class FLPHeuristic:
         # compute the objective value
         objective_value = self._get_objective_value(open_sites, assignments)
 
-        return objective_value
+        # create the solution
+        x, y, z = self._create_solution(open_sites, assignments)
+
+        return FLPSolution(self.instance, objective_value, x, y, z)
