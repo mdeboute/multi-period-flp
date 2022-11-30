@@ -103,20 +103,20 @@ class FLPHeuristic:
         for t in range(self.instance.T):
             for j in range(self.instance.J):
                 if assignments[j][t] == 1:
-                    for nt in range(t, self.instance.T):
+                    for t_ in range(t, self.instance.T):
                         least_cost_site = -1
                         least_cost = 0
                         for i in range(self.instance.I):
-                            if open_sites[i][nt] == 1 and (
-                                self.instance.c[i][j][nt] < least_cost
+                            if open_sites[i][t_] == 1 and (
+                                self.instance.c[i][j][t_] < least_cost
                                 or least_cost_site == -1
                             ):
-                                least_cost = self.instance.c[i][j][nt]
+                                least_cost = self.instance.c[i][j][t_]
                                 least_cost_site = i
                         if least_cost_site != -1:
-                            x[least_cost_site][j][nt] = 1
+                            x[least_cost_site][j][t_] = 1
                         else:
-                            print("Failed to assign customer", j, "at period", nt)
+                            print("Failed to assign customer", j, "at period", t_)
 
         # z[i][t] = 1 if site i (i = 0, 1, ..., I-1) is open at time t (t = 0, 1, ..., T-1), 0 otherwise
         z = open_sites
@@ -153,7 +153,9 @@ class FLPHeuristic:
                 assignment_cost,
             )
 
-            print("Solution found in {0:.2f} seconds".format(time.time() - _start_time))
+            print(
+                f"Result: runtime={time.time() - _start_time:.2f}sec; objective={objective_value}"
+            )
 
             # create the solution
             x, y, z = self._create_solution(open_sites, assignments)

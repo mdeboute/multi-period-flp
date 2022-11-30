@@ -8,6 +8,9 @@ class FLPMIPModel:
         self.instance = instance
         self.model = mip.Model(name="MPFLP", sense=mip.MINIMIZE)
 
+        # enable to store the process log in order to get the runtime
+        self.model.store_search_progress_log = True
+
         # Decisions variables
         # x[i][j][t] = 1 if we affect the customer j (j = 0, 1, ..., J-1) to the site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
         self.x = [
@@ -118,7 +121,7 @@ class FLPMIPModel:
     def solve(
         self,
         solver_name: str = "GRB",
-        verbose: bool = True,
+        verbose: bool = False,
         time_limit: int = 600,
         max_gap: float = 0.0001,
         nb_threads: int = -1,
@@ -128,20 +131,32 @@ class FLPMIPModel:
         self.model.max_seconds = time_limit
         self.model.max_mip_gap = max_gap
         self.model.threads = nb_threads
-
         # Solve model
         _status = self.model.optimize()
 
         # Create solution
         _x, _y, _z = self._create_solution()
+        _runtime = self.model.search_progress_log.log[-1][0]
 
         # Get solution
         if _status == mip.OptimizationStatus.OPTIMAL:
+            if not (verbose):
+                print(
+                    f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
+                )
+            return FLPSolution(
+                self.instance, int(self.model.objective_value), _x, _y, _z
+            )
+        elif _status == mip.OptimizationStatus.FEASIBLE:
+            if not (verbose):
+                print(
+                    f"Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
+                )
             return FLPSolution(
                 self.instance, int(self.model.objective_value), _x, _y, _z
             )
         else:
-            return FLPSolution(self.instance, float("inf"), _x, _y, _z)
+            print("No solution found!")
 
     def __str__(self):
         return f"FLPMIPModel(instance={self.instance})"
