@@ -1,0 +1,79 @@
+Academic license - for non-commercial use only
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (mac64)
+Optimize a model with 8808 rows, 8160 columns and 44380 nonzeros
+Model fingerprint: 0xcc9a2a7d
+Variable types: 0 continuous, 8160 integer (8160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 1e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.07s
+Presolved: 8788 rows, 8140 columns, 44340 nonzeros
+Variable types: 0 continuous, 8140 integer (8140 binary)
+Found heuristic solution: objective 79330.000000
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.01s
+
+Barrier statistics:
+ Dense cols : 80
+ AA' NZ     : 3.814e+04
+ Factor NZ  : 1.672e+05 (roughly 8 MBytes of memory)
+ Factor Ops : 5.868e+06 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.39110580e+06 -3.29107277e+04  3.76e+01 0.00e+00  6.28e+02     0s
+   1   1.05173234e+05 -6.44660363e+05  3.92e-01 1.01e+03  3.43e+01     0s
+   2   8.51061147e+04  3.19807495e+04  5.21e-02 2.26e+02  2.07e+00     0s
+   3   7.77402731e+04  5.61943710e+04  1.24e-02 7.78e+01  8.36e-01     0s
+   4   7.60122472e+04  6.38103275e+04  9.07e-03 3.62e+01  4.69e-01     0s
+   5   7.25270078e+04  6.55085897e+04  4.43e-03 2.04e+01  2.70e-01     0s
+   6   7.01776546e+04  6.67220208e+04  1.85e-03 1.13e+01  1.33e-01     0s
+   7   6.94933733e+04  6.73085164e+04  1.23e-03 6.38e+00  8.42e-02     0s
+   8   6.89627920e+04  6.75778576e+04  7.73e-04 3.93e+00  5.34e-02     0s
+   9   6.87521739e+04  6.76713636e+04  6.01e-04 3.00e+00  4.17e-02     0s
+  10   6.86162457e+04  6.77075179e+04  4.93e-04 2.60e+00  3.50e-02     0s
+  11   6.84512996e+04  6.77354280e+04  3.65e-04 2.31e+00  2.76e-02     0s
+  12   6.83191246e+04  6.78026439e+04  2.65e-04 1.63e+00  1.99e-02     0s
+  13   6.82454466e+04  6.78369700e+04  2.11e-04 1.25e+00  1.57e-02     0s
+  14   6.81878091e+04  6.78592814e+04  1.68e-04 9.98e-01  1.27e-02     0s
+  15   6.80501649e+04  6.78798844e+04  7.21e-05 7.09e-01  6.56e-03     0s
+  16   6.79856149e+04  6.79054246e+04  3.22e-05 3.10e-01  3.09e-03     0s
+  17   6.79707896e+04  6.79202903e+04  2.41e-05 8.38e-02  1.96e-03     0s
+  18   6.79647035e+04  6.79212044e+04  2.07e-05 7.35e-02  1.69e-03     0s
+  19   6.79464049e+04  6.79214254e+04  1.11e-05 6.58e-02  9.67e-04     0s
+  20   6.79291200e+04  6.79247510e+04  1.96e-06 2.01e-03  1.71e-04     0s
+  21   6.79251979e+04  6.79249819e+04  3.50e-08 3.89e-06  8.58e-06     0s
+  22   6.79250002e+04  6.79250000e+04  3.80e-10 3.56e-10  8.58e-09     0s
+
+Barrier solved model in 22 iterations and 0.29 seconds
+Optimal objective 6.79250002e+04
+
+
+Solved with barrier
+
+Root relaxation: objective 6.792500e+04, 1916 iterations, 0.21 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    67925.000000 67925.0000  0.00%     -    0s
+
+Explored 0 nodes (1916 simplex iterations) in 0.33 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 67925 79330 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.792500000000e+04, best bound 6.792500000000e+04, gap 0.0000%
+
+User-callback calls 195, time in user-callback 0.00 sec
+Solution written to /Users/mdeboute/Desktop/Etudes/Master/M2/S9/GOPP/Projet/multi-period-flp/solution/instMulti_I20_J100_T4_0_result.txt

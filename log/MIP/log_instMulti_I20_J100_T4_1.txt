@@ -1,0 +1,62 @@
+Academic license - for non-commercial use only
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (mac64)
+Optimize a model with 8808 rows, 8160 columns and 44380 nonzeros
+Model fingerprint: 0x1f26fe43
+Variable types: 0 continuous, 8160 integer (8160 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 1e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.06s
+Presolved: 8788 rows, 8140 columns, 44340 nonzeros
+Variable types: 0 continuous, 8140 integer (8140 binary)
+Found heuristic solution: objective 120988.00000
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.01s
+
+Barrier statistics:
+ Dense cols : 80
+ AA' NZ     : 3.814e+04
+ Factor NZ  : 1.672e+05 (roughly 8 MBytes of memory)
+ Factor Ops : 5.868e+06 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.98871186e+06 -3.05177492e+04  4.69e+01 0.00e+00  7.51e+02     0s
+   1   1.54565374e+05 -9.54314881e+05  5.27e-01 4.38e+01  4.97e+01     0s
+   2   1.27908086e+05 -7.00135831e+04  6.37e-02 6.68e+00  7.98e+00     0s
+   3   1.25881810e+05  7.32504630e+04  4.37e-02 1.42e+00  2.05e+00     0s
+   4   1.16104812e+05  9.49044363e+04  5.89e-03 6.27e-01  8.39e-01     0s
+   5   1.13184072e+05  1.03464478e+05  2.44e-03 2.70e-01  3.85e-01     0s
+
+Barrier performed 5 iterations in 0.21 seconds
+Barrier solve interrupted - model solved by another algorithm
+
+
+Solved with dual simplex
+
+Root relaxation: objective 1.084920e+05, 1318 iterations, 0.11 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0    108492.00000 108492.000  0.00%     -    0s
+
+Explored 0 nodes (1318 simplex iterations) in 0.23 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 2: 108492 120988 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.084920000000e+05, best bound 1.084920000000e+05, gap 0.0000%
+
+User-callback calls 135, time in user-callback 0.00 sec
+Solution written to /Users/mdeboute/Desktop/Etudes/Master/M2/S9/GOPP/Projet/multi-period-flp/solution/instMulti_I20_J100_T4_1_result.txt

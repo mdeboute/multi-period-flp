@@ -1,0 +1,2 @@
+Result: runtime=0.01sec; objective=87633
+Solution written to /Users/mdeboute/Desktop/Etudes/Master/M2/S9/GOPP/Projet/multi-period-flp/solution/instSingle_I20_J250_T4_0_result.txt

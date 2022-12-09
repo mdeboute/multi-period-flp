@@ -121,7 +121,7 @@ class FLPMIPModel:
     def solve(
         self,
         solver_name: str = "GRB",
-        verbose: bool = False,
+        verbose: bool = True,
         time_limit: int = 600,
         max_gap: float = 0.0001,
         nb_threads: int = -1,
@@ -140,18 +140,16 @@ class FLPMIPModel:
 
         # Get solution
         if _status == mip.OptimizationStatus.OPTIMAL:
-            if not (verbose):
-                print(
-                    f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
-                )
+            print(
+                f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
+            )
             return FLPSolution(
                 self.instance, int(self.model.objective_value), _x, _y, _z
             )
         elif _status == mip.OptimizationStatus.FEASIBLE:
-            if not (verbose):
-                print(
-                    f"Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
-                )
+            print(
+                f"Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}"
+            )
             return FLPSolution(
                 self.instance, int(self.model.objective_value), _x, _y, _z
             )

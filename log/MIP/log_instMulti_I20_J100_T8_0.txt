@@ -1,0 +1,115 @@
+Academic license - for non-commercial use only
+Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (mac64)
+Optimize a model with 17696 rows, 16320 columns and 92780 nonzeros
+Model fingerprint: 0x3ebdb591
+Variable types: 0 continuous, 16320 integer (16320 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+01, 1e+04]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 20 rows and 20 columns
+Presolve time: 0.16s
+Presolved: 17676 rows, 16300 columns, 92740 nonzeros
+Variable types: 0 continuous, 16300 integer (16300 binary)
+Found heuristic solution: objective 141251.00000
+
+Concurrent LP optimizer: dual simplex and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Ordering time: 0.03s
+
+Barrier statistics:
+ Dense cols : 160
+ AA' NZ     : 8.094e+04
+ Factor NZ  : 3.691e+05 (roughly 17 MBytes of memory)
+ Factor Ops : 1.799e+07 (less than 1 second per iteration)
+ Threads    : 3
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.07032210e+06 -5.78746739e+04  4.15e+01 0.00e+00  5.64e+02     0s
+   1   2.32199986e+05 -1.41915534e+06  7.30e-01 1.13e+03  4.38e+01     0s
+   2   1.63956843e+05 -3.94755017e+05  1.14e-01 4.04e+02  1.29e+01     0s
+   3   1.54968683e+05  1.46253261e+04  4.80e-02 9.02e+01  3.08e+00     0s
+   4   1.46335796e+05  9.84465955e+04  2.03e-02 2.40e+01  1.01e+00     0s
+   5   1.35632943e+05  1.15121358e+05  6.40e-03 1.05e+01  4.36e-01     0s
+   6   1.31650103e+05  1.21303570e+05  3.17e-03 5.48e+00  2.16e-01     1s
+   7   1.29599393e+05  1.23519571e+05  1.78e-03 3.25e+00  1.27e-01     1s
+   8   1.28492365e+05  1.24375207e+05  1.11e-03 2.32e+00  8.66e-02     1s
+   9   1.27978605e+05  1.25001853e+05  8.11e-04 1.66e+00  6.25e-02     1s
+  10   1.27618443e+05  1.25346676e+05  6.09e-04 1.28e+00  4.78e-02     1s
+  11   1.27383630e+05  1.25601174e+05  4.79e-04 9.76e-01  3.74e-02     1s
+  12   1.27152243e+05  1.25885254e+05  3.56e-04 6.65e-01  2.65e-02     1s
+  13   1.26974178e+05  1.26016469e+05  2.67e-04 5.20e-01  2.01e-02     1s
+  14   1.26821630e+05  1.26084374e+05  1.88e-04 4.42e-01  1.56e-02     1s
+  15   1.26752603e+05  1.26223245e+05  1.53e-04 2.80e-01  1.11e-02     1s
+  16   1.26690834e+05  1.26257066e+05  1.25e-04 2.42e-01  9.10e-03     1s
+  17   1.26642419e+05  1.26294230e+05  1.01e-04 1.88e-01  7.30e-03     1s
+  18   1.26598101e+05  1.26320535e+05  7.99e-05 1.51e-01  5.82e-03     1s
+  19   1.26561311e+05  1.26347090e+05  6.18e-05 1.15e-01  4.49e-03     1s
+  20   1.26547662e+05  1.26356176e+05  5.54e-05 1.02e-01  4.01e-03     1s
+  21   1.26509915e+05  1.26375935e+05  3.71e-05 7.38e-02  2.82e-03     1s
+  22   1.26490379e+05  1.26389857e+05  2.79e-05 5.26e-02  2.11e-03     1s
+  23   1.26467222e+05  1.26398607e+05  1.70e-05 4.14e-02  1.46e-03     1s
+  24   1.26465091e+05  1.26401234e+05  1.61e-05 3.78e-02  1.36e-03     1s
+  25   1.26462548e+05  1.26404170e+05  1.49e-05 3.38e-02  1.24e-03     1s
+  26   1.26453859e+05  1.26410400e+05  1.10e-05 2.50e-02  9.21e-04     1s
+  27   1.26450760e+05  1.26411406e+05  9.44e-06 2.36e-02  8.38e-04     1s
+  28   1.26443173e+05  1.26415522e+05  6.42e-06 1.72e-02  5.91e-04     1s
+  29   1.26440273e+05  1.26418028e+05  5.24e-06 1.33e-02  4.74e-04     1s
+  30   1.26436931e+05  1.26420246e+05  3.87e-06 1.01e-02  3.56e-04     1s
+  31   1.26435179e+05  1.26421531e+05  3.11e-06 8.57e-03  2.91e-04     1s
+  32   1.26434548e+05  1.26421859e+05  2.85e-06 8.09e-03  2.71e-04     1s
+  33   1.26433978e+05  1.26422230e+05  2.62e-06 7.54e-03  2.52e-04     1s
+  34   1.26432897e+05  1.26423911e+05  2.18e-06 5.01e-03  1.90e-04     1s
+  35   1.26431909e+05  1.26424798e+05  1.77e-06 3.87e-03  1.50e-04     1s
+  36   1.26431437e+05  1.26424977e+05  1.57e-06 3.61e-03  1.37e-04     1s
+  37   1.26429945e+05  1.26425961e+05  9.02e-07 2.29e-03  8.46e-05     1s
+  38   1.26429192e+05  1.26426462e+05  5.99e-07 1.63e-03  5.82e-05     1s
+  39   1.26428927e+05  1.26426632e+05  5.00e-07 1.34e-03  4.88e-05     1s
+  40   1.26428436e+05  1.26427298e+05  3.03e-07 4.59e-04  2.35e-05     1s
+  41   1.26427676e+05  1.26427564e+05  8.05e-09 1.01e-04  2.54e-06     1s
+  42   1.26427655e+05  1.26427649e+05  1.55e-09 6.40e-07  1.15e-07     1s
+  43   1.26427650e+05  1.26427650e+05  2.24e-10 3.00e-08  1.88e-09     1s
+
+Barrier solved model in 43 iterations and 1.02 seconds
+Optimal objective 1.26427650e+05
+
+
+Solved with barrier
+
+Root relaxation: objective 1.264276e+05, 1193 iterations, 0.85 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 126427.650    0 1128 141251.000 126427.650  10.5%     -    1s
+H    0     0                    127946.00000 126427.650  1.19%     -    1s
+H    0     0                    126549.00000 126427.650  0.10%     -    1s
+H    0     0                    126497.00000 126427.650  0.05%     -    2s
+     0     0 126431.061    0 1128 126497.000 126431.061  0.05%     -    3s
+     0     0 126431.061    0 1062 126497.000 126431.061  0.05%     -    4s
+     0     0 126455.600    0 1060 126497.000 126455.600  0.03%     -    5s
+H    0     0                    126494.00000 126455.600  0.03%     -    5s
+     0     0 126455.667    0 1061 126494.000 126455.667  0.03%     -    5s
+     0     0 126455.667    0 1070 126494.000 126455.667  0.03%     -    5s
+     0     0 126455.667    0 1072 126494.000 126455.667  0.03%     -    5s
+H    0     0                    126472.00000 126455.667  0.01%     -    5s
+
+Cutting planes:
+  Gomory: 1
+  Zero half: 93
+
+Explored 1 nodes (2200 simplex iterations) in 5.57 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 7: 126472 126494 126497 ... 141251
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.264720000000e+05, best bound 1.264720000000e+05, gap 0.0000%
+
+User-callback calls 1795, time in user-callback 0.02 sec
+Solution written to /Users/mdeboute/Desktop/Etudes/Master/M2/S9/GOPP/Projet/multi-period-flp/solution/instMulti_I20_J100_T8_0_result.txt
