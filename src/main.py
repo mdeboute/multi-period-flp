@@ -19,9 +19,8 @@ def main():
     if len(argv) == 3:
         time_limit = int(argv[2])
 
-    instance = FLPData(file_path=file_path)
-
     if method == "MIP":
+        instance = FLPData(file_path=file_path)
         model = FLPMIPModel(instance=instance)
         solution = model.solve(time_limit=time_limit)
         if solution.check_feasibility():
@@ -29,6 +28,7 @@ def main():
         else:
             print("The solution is not feasible!")
     elif method == "H":
+        instance = FLPData(file_path=file_path)
         model = FLPHeuristic(instance=instance)
         solution = model.solve(time_limit=time_limit)
         if solution.check_feasibility():
