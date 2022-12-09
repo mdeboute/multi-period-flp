@@ -25,6 +25,7 @@ cd ..
 for instance in `ls $1` ; do
     echo "Resolution of $instance"
     python3 src/main.py $1/$instance $2 $time_limit > log/$2/log_${instance}
+done
 
 grep "Result" log/$2/*.txt >> log/$2/results_$time_limit.csv
 
