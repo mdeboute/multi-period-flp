@@ -4,9 +4,11 @@ from FLPSolution import FLPSolution
 
 
 class FLPMIPModel:
-    def __init__(self, instance: FLPData):
+    def __init__(self, instance: FLPData, solver_name: str = "GRB"):
         self.instance = instance
-        self.model = mip.Model(name="MPFLP", sense=mip.MINIMIZE)
+        self.model = mip.Model(
+            name="MPFLP", sense=mip.MINIMIZE, solver_name=solver_name
+        )
 
         # enable to store the process log in order to get the runtime
         self.model.store_search_progress_log = True
@@ -120,13 +122,11 @@ class FLPMIPModel:
 
     def solve(
         self,
-        solver_name: str = "GRB",
         verbose: bool = True,
         time_limit: int = 600,
         max_gap: float = 0.0001,
         nb_threads: int = -1,
     ) -> FLPSolution:
-        self.model.solver_name = solver_name
         self.model.verbose = int(verbose)
         self.model.max_seconds = time_limit
         self.model.max_mip_gap = max_gap
