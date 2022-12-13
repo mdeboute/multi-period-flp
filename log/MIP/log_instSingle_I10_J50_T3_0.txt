@@ -1,5 +1,5 @@
-Academic license - for non-commercial use only
-Gurobi Optimizer version 9.0.3 build v9.0.3rc0 (mac64)
+Gurobi Optimizer version 9.1.0 build v9.1.0rc0 (linux64)
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
 Optimize a model with 1796 rows, 1560 columns and 8140 nonzeros
 Model fingerprint: 0x1ea7d62a
 Variable types: 0 continuous, 1560 integer (1560 binary)
@@ -9,55 +9,59 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 5e+01]
 Presolve removed 20 rows and 10 columns
-Presolve time: 0.02s
+Presolve time: 0.03s
 Presolved: 1776 rows, 1550 columns, 8090 nonzeros
 Variable types: 0 continuous, 1550 integer (1550 binary)
 Found heuristic solution: objective 26626.000000
 
-Concurrent LP optimizer: dual simplex and barrier
+Concurrent LP optimizer: primal simplex, dual simplex, and barrier
 Showing barrier log only...
 
 Root barrier log...
 
-Ordering time: 0.01s
+Ordering time: 0.02s
 
 Barrier statistics:
  AA' NZ     : 4.489e+04
  Factor NZ  : 2.711e+05 (roughly 4 MBytes of memory)
  Factor Ops : 5.349e+07 (less than 1 second per iteration)
- Threads    : 3
+ Threads    : 6
 
                   Objective                Residual
 Iter       Primal          Dual         Primal    Dual     Compl     Time
    0   1.26441075e+06 -1.26532517e+04  4.10e+01 0.00e+00  1.61e+03     0s
+   1   4.40048791e+04 -1.70659712e+05  5.73e-01 1.82e-11  6.03e+01     0s
+   2   2.85693083e+04  9.02320474e+03  2.17e-02 1.64e-11  4.00e+00     0s
 
-Barrier performed 0 iterations in 0.05 seconds
+Barrier performed 2 iterations in 0.09 seconds
 Barrier solve interrupted - model solved by another algorithm
 
 
 Solved with dual simplex
 
-Root relaxation: objective 2.311300e+04, 922 iterations, 0.03 seconds
+Root relaxation: objective 2.311300e+04, 976 iterations, 0.05 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
      0     0 23113.0000    0  242 26626.0000 23113.0000  13.2%     -    0s
-H    0     0                    23228.000000 23113.0000  0.50%     -    0s
-H    0     0                    23207.000000 23113.0000  0.41%     -    0s
+H    0     0                    23238.000000 23113.0000  0.54%     -    0s
+H    0     0                    23216.000000 23113.0000  0.44%     -    0s
 H    0     0                    23202.000000 23113.0000  0.38%     -    0s
 
 Cutting planes:
   Gomory: 1
-  Zero half: 21
+  Zero half: 35
 
-Explored 1 nodes (939 simplex iterations) in 0.10 seconds
-Thread count was 8 (of 8 available processors)
+Explored 1 nodes (992 simplex iterations) in 0.20 seconds
+Thread count was 16 (of 16 available processors)
 
-Solution count 4: 23202 23207 23228 26626 
+Solution count 4: 23202 23216 23238 26626 
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.320200000000e+04, best bound 2.320200000000e+04, gap 0.0000%
 
-User-callback calls 131, time in user-callback 0.00 sec
-Solution written to /Users/mdeboute/Desktop/Etudes/Master/M2/S9/GOPP/Projet/multi-period-flp/solution/instSingle_I10_J50_T3_0_result.txt
+User-callback calls 175, time in user-callback 0.00 sec
+['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
+Optimal Result: runtime=0.14sec; objective=23202
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instSingle_I10_J50_T3_0_result.txt
