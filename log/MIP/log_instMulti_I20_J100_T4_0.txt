@@ -50,24 +50,24 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   17   6.80082632e+04  6.79157930e+04  4.77e-05 5.37e-02  3.62e-03     0s
   18   6.79962234e+04  6.79218336e+04  4.03e-05 2.58e-02  2.91e-03     0s
   19   6.79446474e+04  6.79215979e+04  1.08e-05 2.42e-02  9.05e-04     0s
-  20   6.79375014e+04  6.79248580e+04  6.73e-06 1.68e-03  4.94e-04     1s
-  21   6.79250107e+04  6.79249994e+04  5.33e-09 4.22e-06  4.40e-07     1s
-  22   6.79250000e+04  6.79250000e+04  1.47e-10 9.65e-10  4.40e-10     1s
+  20   6.79375014e+04  6.79248580e+04  6.73e-06 1.68e-03  4.94e-04     0s
+  21   6.79250107e+04  6.79249994e+04  5.33e-09 4.22e-06  4.40e-07     0s
+  22   6.79250000e+04  6.79250000e+04  1.47e-10 9.65e-10  4.40e-10     0s
 
-Barrier solved model in 22 iterations and 0.53 seconds
+Barrier solved model in 22 iterations and 0.49 seconds
 Optimal objective 6.79250000e+04
 
 
 Solved with barrier
 
-Root relaxation: objective 6.792500e+04, 1942 iterations, 0.42 seconds
+Root relaxation: objective 6.792500e+04, 1942 iterations, 0.37 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
 *    0     0               0    67925.000000 67925.0000  0.00%     -    0s
 
-Explored 0 nodes (1942 simplex iterations) in 0.60 seconds
+Explored 0 nodes (1942 simplex iterations) in 0.54 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 2: 67925 79330 
@@ -75,7 +75,7 @@ Solution count 2: 67925 79330
 Optimal solution found (tolerance 1.00e-04)
 Best objective 6.792500000000e+04, best bound 6.792500000000e+04, gap 0.0000%
 
-User-callback calls 207, time in user-callback 0.01 sec
+User-callback calls 203, time in user-callback 0.00 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=0.59sec; objective=67925
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I20_J100_T4_0_result.txt
+Optimal Result: runtime=0.53sec; objective=67925; gap=0.0000%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I20_J100_T4_0_result.txt

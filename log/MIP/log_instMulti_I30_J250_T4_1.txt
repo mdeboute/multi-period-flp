@@ -10,7 +10,7 @@ Coefficient statistics:
   RHS range        [1e+00, 2e+02]
 Presolve added 0 rows and 470 columns
 Presolve removed 30 rows and 0 columns
-Presolve time: 0.58s
+Presolve time: 0.56s
 Presolved: 31878 rows, 30710 columns, 137010 nonzeros
 Variable types: 0 continuous, 30710 integer (30710 binary)
 Found heuristic solution: objective 354135.00000
@@ -38,7 +38,7 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
    4   3.73780186e+05  5.28201137e+04  1.65e-01 2.09e+01  3.48e+00     1s
    5   3.64100099e+05  1.87158825e+05  1.17e-01 9.70e+00  1.88e+00     1s
    6   3.57806366e+05  2.47910096e+05  9.51e-02 5.61e+00  1.15e+00     1s
-   7   3.51148884e+05  2.79401471e+05  7.60e-02 3.40e+00  7.36e-01     2s
+   7   3.51148884e+05  2.79401471e+05  7.60e-02 3.40e+00  7.36e-01     1s
    8   3.43535378e+05  2.95251188e+05  5.59e-02 2.14e+00  4.91e-01     2s
    9   3.40820558e+05  3.04742761e+05  4.90e-02 1.40e+00  3.61e-01     2s
   10   3.36090903e+05  3.08145733e+05  3.81e-02 1.05e+00  2.79e-01     2s
@@ -55,7 +55,7 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   21   3.21912501e+05  3.18995372e+05  5.02e-03 8.79e-02  2.83e-02     2s
   22   3.21638167e+05  3.19269570e+05  4.35e-03 6.07e-02  2.28e-02     2s
   23   3.21333691e+05  3.19338287e+05  3.58e-03 5.38e-02  1.92e-02     2s
-  24   3.21239477e+05  3.19385760e+05  3.34e-03 4.89e-02  1.79e-02     3s
+  24   3.21239477e+05  3.19385760e+05  3.34e-03 4.89e-02  1.79e-02     2s
   25   3.21053680e+05  3.19498877e+05  2.87e-03 3.71e-02  1.49e-02     3s
   26   3.20891450e+05  3.19585261e+05  2.47e-03 2.79e-02  1.25e-02     3s
   27   3.20601009e+05  3.19628836e+05  1.78e-03 2.32e-02  9.35e-03     3s
@@ -66,14 +66,19 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   32   3.20026326e+05  3.19778362e+05  3.86e-04 7.66e-03  2.43e-03     3s
   33   3.19998198e+05  3.19815647e+05  3.19e-04 4.08e-03  1.76e-03     3s
   34   3.19933844e+05  3.19826623e+05  1.69e-04 2.97e-03  1.05e-03     3s
+  35   3.19900818e+05  3.19843263e+05  9.06e-05 1.44e-03  5.63e-04     3s
+  36   3.19887897e+05  3.19845076e+05  6.17e-05 1.28e-03  4.23e-04     3s
+  37   3.19877887e+05  3.19857973e+05  3.89e-05 1.14e-04  1.89e-04     3s
+  38   3.19862590e+05  3.19859858e+05  5.40e-06 1.04e-06  2.59e-05     3s
+  39   3.19860056e+05  3.19859996e+05  1.06e-07 7.08e-08  5.75e-07     3s
 
-Barrier performed 34 iterations in 3.02 seconds
+Barrier performed 39 iterations in 3.03 seconds
 Barrier solve interrupted - model solved by another algorithm
 
 
 Solved with dual simplex
 
-Root relaxation: objective 3.198600e+05, 5433 iterations, 2.15 seconds
+Root relaxation: objective 3.198600e+05, 5433 iterations, 2.19 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
@@ -93,7 +98,7 @@ H    0     0                    319936.00000 319875.750  0.02%     -    7s
 Cutting planes:
   Zero half: 47
 
-Explored 1 nodes (7123 simplex iterations) in 7.30 seconds
+Explored 1 nodes (7123 simplex iterations) in 7.27 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 10: 319936 319961 320276 ... 354135
@@ -101,7 +106,7 @@ Solution count 10: 319936 319961 320276 ... 354135
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.199360000000e+05, best bound 3.199190000000e+05, gap 0.0053%
 
-User-callback calls 983, time in user-callback 0.02 sec
+User-callback calls 977, time in user-callback 0.02 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=6.76sec; objective=319936
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I30_J250_T4_1_result.txt
+Optimal Result: runtime=6.69sec; objective=319936; gap=0.0001%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I30_J250_T4_1_result.txt

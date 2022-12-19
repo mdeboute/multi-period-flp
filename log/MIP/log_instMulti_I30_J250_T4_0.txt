@@ -10,7 +10,7 @@ Coefficient statistics:
   RHS range        [1e+00, 2e+02]
 Presolve added 0 rows and 470 columns
 Presolve removed 30 rows and 0 columns
-Presolve time: 0.62s
+Presolve time: 0.61s
 Presolved: 31878 rows, 30710 columns, 137010 nonzeros
 Variable types: 0 continuous, 30710 integer (30710 binary)
 Found heuristic solution: objective 301048.00000
@@ -38,7 +38,7 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
    4   3.09814640e+05  1.07543468e+05  1.78e-01 1.07e+01  2.20e+00     1s
    5   3.01341632e+05  1.81333156e+05  1.24e-01 5.50e+00  1.26e+00     1s
    6   2.93585983e+05  2.21365335e+05  8.92e-02 2.84e+00  7.38e-01     1s
-   7   2.89487277e+05  2.45328488e+05  7.40e-02 1.29e+00  4.34e-01     1s
+   7   2.89487277e+05  2.45328488e+05  7.40e-02 1.29e+00  4.34e-01     2s
    8   2.81828281e+05  2.50856732e+05  4.81e-02 8.91e-01  3.06e-01     2s
    9   2.79344719e+05  2.57293417e+05  4.10e-02 5.23e-01  2.12e-01     2s
   10   2.77002977e+05  2.59126703e+05  3.42e-02 3.90e-01  1.71e-01     2s
@@ -57,39 +57,39 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   23   2.65343834e+05  2.64306566e+05  1.97e-03 1.87e-02  9.91e-03     2s
   24   2.65270223e+05  2.64335300e+05  1.78e-03 1.68e-02  8.93e-03     2s
   25   2.65126328e+05  2.64393778e+05  1.41e-03 1.25e-02  6.99e-03     2s
-  26   2.64980213e+05  2.64496267e+05  1.03e-03 7.78e-03  4.55e-03     2s
-  27   2.64822100e+05  2.64543038e+05  6.28e-04 2.22e-03  2.60e-03     2s
-  28   2.64740472e+05  2.64551476e+05  4.20e-04 1.55e-03  1.76e-03     2s
-  29   2.64683122e+05  2.64562511e+05  2.79e-04 4.16e-04  1.12e-03     2s
-  30   2.64649411e+05  2.64566671e+05  1.94e-04 1.74e-04  7.66e-04     2s
-  31   2.64572472e+05  2.64569268e+05  6.90e-06 1.26e-05  3.01e-05     2s
-  32   2.64569510e+05  2.64569500e+05  2.35e-08 9.19e-08  9.06e-08     2s
-  33   2.64569500e+05  2.64569500e+05  2.50e-12 7.62e-08  2.25e-13     2s
+  26   2.64980213e+05  2.64496267e+05  1.03e-03 7.78e-03  4.55e-03     3s
+  27   2.64822100e+05  2.64543038e+05  6.28e-04 2.22e-03  2.60e-03     3s
+  28   2.64740472e+05  2.64551476e+05  4.20e-04 1.55e-03  1.76e-03     3s
+  29   2.64683122e+05  2.64562511e+05  2.79e-04 4.16e-04  1.12e-03     3s
+  30   2.64649411e+05  2.64566671e+05  1.94e-04 1.74e-04  7.66e-04     3s
+  31   2.64572472e+05  2.64569268e+05  6.90e-06 1.26e-05  3.01e-05     3s
+  32   2.64569510e+05  2.64569500e+05  2.35e-08 9.19e-08  9.06e-08     3s
+  33   2.64569500e+05  2.64569500e+05  2.50e-12 7.62e-08  2.25e-13     3s
 
-Barrier solved model in 33 iterations and 2.42 seconds
+Barrier solved model in 33 iterations and 2.73 seconds
 Optimal objective 2.64569500e+05
 
 
 Solved with barrier
 
-Root relaxation: objective 2.645695e+05, 5121 iterations, 1.67 seconds
+Root relaxation: objective 2.645695e+05, 5121 iterations, 1.98 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
      0     0 264569.500    0  911 301048.000 264569.500  12.1%     -    3s
-H    0     0                    265906.00000 264569.500  0.50%     -    3s
-H    0     0                    265875.00000 264569.500  0.49%     -    3s
-H    0     0                    265848.00000 264569.500  0.48%     -    3s
+H    0     0                    265906.00000 264569.500  0.50%     -    4s
+H    0     0                    265875.00000 264569.500  0.49%     -    4s
+H    0     0                    265848.00000 264569.500  0.48%     -    4s
      0     0 264633.000    0  844 265848.000 264633.000  0.46%     -    7s
-H    0     0                    264690.00000 264633.000  0.02%     -    7s
-     0     0 264690.000    0  846 264690.000 264690.000  0.00%     -    7s
+H    0     0                    264690.00000 264633.000  0.02%     -    8s
+     0     0 264690.000    0  846 264690.000 264690.000  0.00%     -    8s
 
 Cutting planes:
   Gomory: 2
   Zero half: 13
 
-Explored 1 nodes (5676 simplex iterations) in 7.68 seconds
+Explored 1 nodes (5676 simplex iterations) in 8.64 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 5: 264690 265848 265875 ... 301048
@@ -97,7 +97,7 @@ Solution count 5: 264690 265848 265875 ... 301048
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.646900000000e+05, best bound 2.646900000000e+05, gap 0.0000%
 
-User-callback calls 2359, time in user-callback 0.02 sec
+User-callback calls 2361, time in user-callback 0.03 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=7.68sec; objective=264690
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I30_J250_T4_0_result.txt
+Optimal Result: runtime=8.63sec; objective=264690; gap=0.0000%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I30_J250_T4_0_result.txt

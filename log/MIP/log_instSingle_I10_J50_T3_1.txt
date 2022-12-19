@@ -27,7 +27,7 @@ Barrier statistics:
  Factor Ops : 5.349e+07 (less than 1 second per iteration)
  Threads    : 6
 
-Barrier performed 0 iterations in 0.07 seconds
+Barrier performed 0 iterations in 0.08 seconds
 Barrier solve interrupted - model solved by another algorithm
 
 
@@ -50,7 +50,7 @@ Cutting planes:
   Zero half: 20
   RLT: 1
 
-Explored 1 nodes (796 simplex iterations) in 0.21 seconds
+Explored 1 nodes (796 simplex iterations) in 0.20 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 6: 24133 24189 24195 ... 26716
@@ -58,7 +58,7 @@ Solution count 6: 24133 24189 24195 ... 26716
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.413300000000e+04, best bound 2.413300000000e+04, gap 0.0000%
 
-User-callback calls 159, time in user-callback 0.00 sec
+User-callback calls 165, time in user-callback 0.00 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=0.12sec; objective=24133
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instSingle_I10_J50_T3_1_result.txt
+Optimal Result: runtime=0.13sec; objective=24133; gap=0.0000%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instSingle_I10_J50_T3_1_result.txt
