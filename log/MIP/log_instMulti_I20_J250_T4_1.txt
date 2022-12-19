@@ -58,16 +58,14 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   25   2.31076184e+05  2.31073837e+05  1.46e-07 2.49e-05  3.77e-05     1s
   26   2.31074806e+05  2.31073965e+05  5.26e-08 2.75e-06  1.35e-05     1s
   27   2.31074293e+05  2.31073991e+05  1.87e-08 2.40e-07  4.85e-06     1s
-  28   2.31074001e+05  2.31074000e+05  1.44e-10 8.71e-08  1.84e-08     1s
-  29   2.31074000e+05  2.31074000e+05  3.08e-12 1.19e-11  7.88e-13     1s
 
-Barrier solved model in 29 iterations and 1.42 seconds
-Optimal objective 2.31074000e+05
+Barrier performed 27 iterations in 1.35 seconds
+Barrier solve interrupted - model solved by another algorithm
 
 
 Solved with dual simplex
 
-Root relaxation: objective 2.310740e+05, 3622 iterations, 1.11 seconds
+Root relaxation: objective 2.310740e+05, 3622 iterations, 1.01 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
@@ -80,7 +78,7 @@ Cutting planes:
   Gomory: 1
   Zero half: 5
 
-Explored 1 nodes (3729 simplex iterations) in 2.27 seconds
+Explored 1 nodes (3729 simplex iterations) in 2.12 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 3: 231085 231099 258970 
@@ -88,7 +86,7 @@ Solution count 3: 231085 231099 258970
 Optimal solution found (tolerance 1.00e-04)
 Best objective 2.310850000000e+05, best bound 2.310780000000e+05, gap 0.0030%
 
-User-callback calls 613, time in user-callback 0.01 sec
+User-callback calls 592, time in user-callback 0.01 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=1.74sec; objective=231085
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I20_J250_T4_1_result.txt
+Optimal Result: runtime=1.63sec; objective=231085; gap=0.0000%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I20_J250_T4_1_result.txt

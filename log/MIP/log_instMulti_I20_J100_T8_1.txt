@@ -9,7 +9,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+02]
 Presolve removed 20 rows and 20 columns
-Presolve time: 0.22s
+Presolve time: 0.23s
 Presolved: 17676 rows, 16300 columns, 92740 nonzeros
 Variable types: 0 continuous, 16300 integer (16300 binary)
 Found heuristic solution: objective 127082.00000
@@ -71,13 +71,13 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   38   1.13165582e+05  1.13165570e+05  1.79e-09 7.99e-06  2.76e-07     1s
   39   1.13165577e+05  1.13165576e+05  8.51e-11 4.10e-07  8.29e-09     1s
 
-Barrier solved model in 39 iterations and 1.45 seconds
+Barrier solved model in 39 iterations and 1.40 seconds
 Optimal objective 1.13165577e+05
 
 
 Solved with barrier
 
-Root relaxation: objective 1.131656e+05, 1719 iterations, 1.30 seconds
+Root relaxation: objective 1.131656e+05, 1719 iterations, 1.23 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
@@ -92,24 +92,24 @@ H    0     0                    113737.00000 113165.577  0.50%     -    3s
      0     0 113176.727    0 1369 113737.000 113176.727  0.49%     -    5s
      0     0 113176.930    0 1369 113737.000 113176.930  0.49%     -    5s
      0     0 113199.984    0 1716 113737.000 113199.984  0.47%     -    6s
-     0     0 113201.674    0 1711 113737.000 113201.674  0.47%     -    7s
-     0     0 113201.748    0 1707 113737.000 113201.748  0.47%     -    7s
+     0     0 113201.674    0 1711 113737.000 113201.674  0.47%     -    6s
+     0     0 113201.748    0 1707 113737.000 113201.748  0.47%     -    6s
      0     0 113201.761    0 1710 113737.000 113201.761  0.47%     -    7s
      0     0 113211.763    0 1713 113737.000 113211.763  0.46%     -    8s
      0     0 113212.449    0 1708 113737.000 113212.449  0.46%     -    8s
      0     0 113212.481    0 1709 113737.000 113212.481  0.46%     -    8s
      0     0 113212.481    0 1709 113737.000 113212.481  0.46%     -    8s
-     0     0 113244.375    0 1716 113737.000 113244.375  0.43%     -   10s
+     0     0 113244.375    0 1716 113737.000 113244.375  0.43%     -    9s
      0     0 113244.375    0 1677 113737.000 113244.375  0.43%     -   10s
      0     0 113244.375    0 1709 113737.000 113244.375  0.43%     -   10s
      0     0 113244.375    0 1713 113737.000 113244.375  0.43%     -   10s
-     0     0 113297.333    0 1792 113737.000 113297.333  0.39%     -   11s
+     0     0 113297.333    0 1792 113737.000 113297.333  0.39%     -   10s
      0     0 113297.400    0 1764 113737.000 113297.400  0.39%     -   11s
      0     0 113297.400    0 1768 113737.000 113297.400  0.39%     -   11s
      0     0 113362.977    0 1806 113737.000 113362.977  0.33%     -   12s
-     0     0 113362.977    0 1799 113737.000 113362.977  0.33%     -   13s
-H    0     2                    113736.00000 113362.977  0.33%     -   14s
-     0     2 113362.977    0 1799 113736.000 113362.977  0.33%     -   14s
+     0     0 113362.977    0 1799 113737.000 113362.977  0.33%     -   12s
+H    0     2                    113736.00000 113362.977  0.33%     -   13s
+     0     2 113362.977    0 1799 113736.000 113362.977  0.33%     -   13s
      1     4 113362.977    1 1613 113736.000 113362.977  0.33%  1011   15s
 *   12     8               3    113586.00000 113362.977  0.20%  1068   17s
     32     6 113556.385    7 1488 113586.000 113485.000  0.09%   713   20s
@@ -118,7 +118,7 @@ Cutting planes:
   Gomory: 4
   Zero half: 78
 
-Explored 129 nodes (32647 simplex iterations) in 22.25 seconds
+Explored 129 nodes (32647 simplex iterations) in 21.59 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 6: 113586 113736 113737 ... 127082
@@ -126,7 +126,7 @@ Solution count 6: 113586 113736 113737 ... 127082
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.135860000000e+05, best bound 1.135780000000e+05, gap 0.0070%
 
-User-callback calls 5959, time in user-callback 0.08 sec
+User-callback calls 5970, time in user-callback 0.08 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=22.25sec; objective=113586
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I20_J100_T8_1_result.txt
+Optimal Result: runtime=21.59sec; objective=113586; gap=0.0001%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I20_J100_T8_1_result.txt

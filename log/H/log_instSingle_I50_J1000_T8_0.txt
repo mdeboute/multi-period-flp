@@ -1,2 +1,2 @@
-Result: runtime=0.27sec; objective=512626
+Result: runtime=0.29sec; objective=512626
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instSingle_I50_J1000_T8_0_result.txt

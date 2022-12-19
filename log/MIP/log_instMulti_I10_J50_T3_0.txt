@@ -21,7 +21,7 @@ Root barrier log...
 
 Ordering time: 0.02s
 
-Barrier performed 0 iterations in 0.06 seconds
+Barrier performed 0 iterations in 0.07 seconds
 Barrier solve interrupted - model solved by another algorithm
 
 
@@ -46,7 +46,7 @@ Cutting planes:
   Clique: 1
   Zero half: 8
 
-Explored 1 nodes (996 simplex iterations) in 0.25 seconds
+Explored 1 nodes (996 simplex iterations) in 0.23 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 7: 34325 34344 34344 ... 38161
@@ -54,7 +54,7 @@ Solution count 7: 34325 34344 34344 ... 38161
 Optimal solution found (tolerance 1.00e-04)
 Best objective 3.432500000000e+04, best bound 3.432500000000e+04, gap 0.0000%
 
-User-callback calls 185, time in user-callback 0.00 sec
+User-callback calls 170, time in user-callback 0.00 sec
 ['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=0.25sec; objective=34325
-Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution/instMulti_I10_J50_T3_0_result.txt
+Optimal Result: runtime=0.23sec; objective=34325; gap=0.0000%
+Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I10_J50_T3_0_result.txt
