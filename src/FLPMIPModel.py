@@ -154,7 +154,7 @@ class FLPMIPModel:
                 self.instance, int(self.model.objective_value), _x, _y, _z
             )
         else:
-            print("No solution found!")
+            print(f"No solution found in {time_limit} seconds!")
 
     def __str__(self):
         return f"FLPMIPModel(instance={self.instance})"

@@ -162,5 +162,5 @@ class FLPHeuristic:
 
             return FLPSolution(self.instance, objective_value, x, y, z)
 
-        print("No solution found in {0:.2f} seconds".format(time.time() - _start_time))
+        print("No solution found in {0:.2f} seconds!".format(time.time() - _start_time))
         exit(1)
