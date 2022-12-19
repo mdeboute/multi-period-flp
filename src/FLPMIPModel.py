@@ -141,7 +141,7 @@ class FLPMIPModel:
         # Get solution
         if _status == mip.OptimizationStatus.OPTIMAL:
             print(
-                f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}, gap={self.model.gap:.2f}%"
+                f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}; gap={self.model.gap:.2f}%"
             )
             return FLPSolution(
                 self.instance, int(self.model.objective_value), _x, _y, _z
