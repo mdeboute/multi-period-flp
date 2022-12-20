@@ -3,22 +3,24 @@ from pathlib import Path
 
 
 class FLPSolution:
-    _BASE_DIR = Path(__file__).resolve().parent.parent
-    _SOLUTION_DIR = str(_BASE_DIR) + "/solution/"
+    __BASE_DIR = Path(__file__).resolve().parent.parent
 
     def __init__(
         self,
         instance: FLPData,
+        algorithm: str,
         objective_value: int,
         x: list([list([list()])]),
         y: list([list()]),
         z: list([list()]),
     ):
         self.instance = instance
+        self.algorithm = algorithm
         self.objective_value = objective_value
         self.x = x  # x[i][j][t] = 1 if we affect the customer j (j = 0, 1, ..., J-1) to the site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
         self.y = y  # y[i][t] = 1 if we open site i (i = 0, 1, ..., I-1) at time t (t = 0, 1, ..., T-1), 0 otherwise
         self.z = z  # z[i][t] = 1 if site i (i = 0, 1, ..., I-1) is open at time t (t = 0, 1, ..., T-1), 0 otherwise
+        self.__SOLUTION_DIR = str(self.__BASE_DIR) + "/solution/" + self.algorithm
 
     def __str__(self):
         return f"FLPSolution(objective_value={self.objective_value})"
@@ -151,8 +153,8 @@ class FLPSolution:
 
     def write(self):
         # create a _SOLUTION_DIR if it does not exist
-        Path(self._SOLUTION_DIR).mkdir(parents=True, exist_ok=True)
-        _file_path = self._SOLUTION_DIR + self.instance.name + "_result.txt"
+        Path(self.__SOLUTION_DIR).mkdir(parents=True, exist_ok=True)
+        _file_path = self.__SOLUTION_DIR + "/solution_" + self.instance.name + ".txt"
         with open(_file_path, "w") as file:
             # the first line is the total cost of the solution, then
             # a line for each site with the site number (starting at 1) and the period from which the site is open (0 if it is not open)

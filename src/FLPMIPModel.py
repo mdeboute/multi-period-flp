@@ -6,6 +6,7 @@ from FLPSolution import FLPSolution
 class FLPMIPModel:
     def __init__(self, instance: FLPData):
         self.instance = instance
+        self.__algorithm = "MIP"
         self.model = mip.Model(name="MPFLP", sense=mip.MINIMIZE)
 
         # enable to store the process log in order to get the runtime
@@ -144,14 +145,24 @@ class FLPMIPModel:
                 f"Optimal Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}; gap={self.model.gap:.4f}%"
             )
             return FLPSolution(
-                self.instance, int(self.model.objective_value), _x, _y, _z
+                self.instance,
+                self.__algorithm,
+                int(self.model.objective_value),
+                _x,
+                _y,
+                _z,
             )
         elif _status == mip.OptimizationStatus.FEASIBLE:
             print(
-                    f"Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}; gap={100*self.model.gap:.4f}%"
+                f"Result: runtime={_runtime:.2f}sec; objective={int(self.model.objective_value)}; gap={100*self.model.gap:.4f}%"
             )
             return FLPSolution(
-                self.instance, int(self.model.objective_value), _x, _y, _z
+                self.instance,
+                self.__algorithm,
+                int(self.model.objective_value),
+                _x,
+                _y,
+                _z,
             )
         else:
             print(f"No solution found in {time_limit} seconds!")

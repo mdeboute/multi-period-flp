@@ -6,6 +6,7 @@ import time
 class FLPHeuristic:
     def __init__(self, instance: FLPData):
         self.instance = instance
+        self.__algorithm = "H"
 
     def _solve_open_sites(self):
         # this method solves the open sites problem for each period
@@ -160,7 +161,9 @@ class FLPHeuristic:
             # create the solution
             x, y, z = self._create_solution(open_sites, assignments)
 
-            return FLPSolution(self.instance, objective_value, x, y, z)
+            return FLPSolution(
+                self.instance, self.__algorithm, objective_value, x, y, z
+            )
 
         print("No solution found in {0:.2f} seconds!".format(time.time() - _start_time))
         exit(1)
