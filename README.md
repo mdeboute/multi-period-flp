@@ -2,8 +2,12 @@
 
 Don't forget to do a `pip install -r requirements.txt` before running the code.
 
+For the main program:
+
 Type `python3 src/main.py -h` for help.
 
-## Overleaf report
+For the benchmark:
 
-<https://www.overleaf.com/7493263747wxkjvfbwkcvb>
+Type `./benchmark.sh -h` for help.
+
+## [French report](report.pdf)
