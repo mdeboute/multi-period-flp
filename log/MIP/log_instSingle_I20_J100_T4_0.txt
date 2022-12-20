@@ -47,12 +47,12 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   14   4.45286409e+04  4.42205346e+04  2.54e-05 1.78e-01  1.23e-02     0s
   15   4.44564777e+04  4.42506552e+04  1.73e-05 1.06e-01  8.20e-03     0s
   16   4.44332300e+04  4.42594490e+04  1.47e-05 8.42e-02  6.92e-03     0s
-  17   4.43989690e+04  4.42664125e+04  1.11e-05 6.51e-02  5.28e-03     0s
-  18   4.43653466e+04  4.42747887e+04  7.54e-06 4.34e-02  3.61e-03     0s
-  19   4.43477853e+04  4.42787423e+04  5.69e-06 3.30e-02  2.75e-03     0s
-  20   4.43303203e+04  4.42815966e+04  3.91e-06 2.48e-02  1.94e-03     0s
-  21   4.43208429e+04  4.42848289e+04  2.96e-06 1.56e-02  1.44e-03     0s
-  22   4.43151615e+04  4.42854634e+04  2.39e-06 1.38e-02  1.18e-03     0s
+  17   4.43989690e+04  4.42664125e+04  1.11e-05 6.51e-02  5.28e-03     1s
+  18   4.43653466e+04  4.42747887e+04  7.54e-06 4.34e-02  3.61e-03     1s
+  19   4.43477853e+04  4.42787423e+04  5.69e-06 3.30e-02  2.75e-03     1s
+  20   4.43303203e+04  4.42815966e+04  3.91e-06 2.48e-02  1.94e-03     1s
+  21   4.43208429e+04  4.42848289e+04  2.96e-06 1.56e-02  1.44e-03     1s
+  22   4.43151615e+04  4.42854634e+04  2.39e-06 1.38e-02  1.18e-03     1s
   23   4.43123245e+04  4.42864319e+04  2.11e-06 1.12e-02  1.03e-03     1s
   24   4.43035467e+04  4.42884926e+04  1.26e-06 5.08e-03  6.00e-04     1s
   25   4.43005453e+04  4.42896947e+04  9.72e-07 1.58e-03  4.32e-04     1s
@@ -61,18 +61,18 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   28   4.42903666e+04  4.42902909e+04  4.32e-09 5.17e-05  3.02e-06     1s
   29   4.42903126e+04  4.42903125e+04  4.24e-11 1.45e-06  3.17e-09     1s
 
-Barrier solved model in 29 iterations and 0.58 seconds
+Barrier solved model in 29 iterations and 0.69 seconds
 Optimal objective 4.42903126e+04
 
 
 Solved with barrier
 
-Root relaxation: objective 4.429031e+04, 1826 iterations, 0.44 seconds
+Root relaxation: objective 4.429031e+04, 1826 iterations, 0.57 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 44290.3125    0  981 51747.0000 44290.3125  14.4%     -    0s
+     0     0 44290.3125    0  981 51747.0000 44290.3125  14.4%     -    1s
 H    0     0                    44933.000000 44290.3125  1.43%     -    1s
 H    0     0                    44782.000000 44290.3125  1.10%     -    1s
 H    0     0                    44477.000000 44290.3125  0.42%     -    1s
@@ -86,7 +86,7 @@ Cutting planes:
   Gomory: 3
   Zero half: 145
 
-Explored 1 nodes (3268 simplex iterations) in 3.50 seconds
+Explored 1 nodes (3268 simplex iterations) in 3.59 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 4: 44477 44782 44933 51747 
@@ -94,7 +94,6 @@ Solution count 4: 44477 44782 44933 51747
 Optimal solution found (tolerance 1.00e-04)
 Best objective 4.447700000000e+04, best bound 4.447700000000e+04, gap 0.0000%
 
-User-callback calls 1321, time in user-callback 0.01 sec
-['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=3.15sec; objective=44477; gap=0.0000%
+User-callback calls 1382, time in user-callback 0.01 sec
+Optimal Result: runtime=3.22sec; objective=44477; gap=0.0000%
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instSingle_I20_J100_T4_0_result.txt

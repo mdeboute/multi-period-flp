@@ -38,7 +38,7 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
    5   1.14099129e+05  1.00001361e+05  8.96e-04 1.28e+02  5.39e-01     0s
    6   1.12374899e+05  1.03170499e+05  5.33e-04 8.30e+01  3.53e-01     0s
 
-Barrier performed 6 iterations in 0.30 seconds
+Barrier performed 6 iterations in 0.31 seconds
 Barrier solve interrupted - model solved by another algorithm
 
 
@@ -59,7 +59,6 @@ Solution count 2: 108492 120988
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.084920000000e+05, best bound 1.084920000000e+05, gap 0.0000%
 
-User-callback calls 144, time in user-callback 0.00 sec
-['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
+User-callback calls 147, time in user-callback 0.00 sec
 Optimal Result: runtime=0.32sec; objective=108492; gap=0.0000%
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I20_J100_T4_1_result.txt

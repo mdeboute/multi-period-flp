@@ -11,7 +11,7 @@ Coefficient statistics:
 Presolve removed 10030 rows and 30 columns (presolve time = 6s) ...
 Presolve added 0 rows and 9970 columns
 Presolve removed 30 rows and 0 columns
-Presolve time: 8.36s
+Presolve time: 8.04s
 Presolved: 383384 rows, 370690 columns, 1531710 nonzeros
 Variable types: 0 continuous, 370690 integer (370690 binary)
 Found heuristic solution: objective 1021783.0000
@@ -21,7 +21,7 @@ Showing barrier log only...
 
 Root barrier log...
 
-Ordering time: 0.13s
+Ordering time: 0.12s
 
 Barrier statistics:
  Dense cols : 360
@@ -32,12 +32,12 @@ Barrier statistics:
 
                   Objective                Residual
 Iter       Primal          Dual         Primal    Dual     Compl     Time
-   0   5.21300887e+08 -7.93510335e+08  4.05e+02 3.00e+01  3.30e+04    17s
+   0   5.21300887e+08 -7.93510335e+08  4.05e+02 3.00e+01  3.30e+04    16s
    1   2.57884372e+06 -8.90147899e+08  3.80e+00 7.51e+03  1.05e+03    17s
    2   1.51782047e+06 -9.95458000e+07  1.13e+00 8.63e+02  1.22e+02    18s
    3   1.07427359e+06 -9.64460012e+06  2.87e-02 6.94e+01  9.74e+00    19s
    4   1.01947180e+06 -1.75851886e+06  2.37e-03 1.63e+01  2.49e+00    20s
-   5   9.76371561e+05  7.81256027e+04  1.67e-03 4.05e+00  8.06e-01    21s
+   5   9.76371561e+05  7.81256027e+04  1.67e-03 4.05e+00  8.06e-01    20s
    6   9.44551424e+05  4.27101040e+05  1.33e-03 1.81e+00  4.64e-01    22s
    7   9.16446410e+05  6.03265725e+05  1.10e-03 8.93e-01  2.81e-01    23s
    8   8.90294750e+05  6.51305289e+05  9.29e-04 5.79e-01  2.14e-01    24s
@@ -46,124 +46,123 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   11   8.37376167e+05  7.13510885e+05  6.12e-04 1.50e-01  1.11e-01    27s
   12   8.15523023e+05  7.22157224e+05  4.94e-04 9.43e-02  8.37e-02    28s
   13   8.00249452e+05  7.27411141e+05  4.10e-04 6.06e-02  6.53e-02    29s
-  14   7.86912852e+05  7.30559643e+05  3.22e-04 4.21e-02  5.05e-02    30s
-  15   7.75422040e+05  7.32757162e+05  2.54e-04 3.01e-02  3.82e-02    31s
+  14   7.86912852e+05  7.30559643e+05  3.22e-04 4.21e-02  5.05e-02    31s
+  15   7.75422040e+05  7.32757162e+05  2.54e-04 3.01e-02  3.82e-02    32s
   16   7.69076840e+05  7.34509703e+05  2.14e-04 2.11e-02  3.10e-02    33s
   17   7.61868381e+05  7.35496013e+05  1.69e-04 1.56e-02  2.36e-02    34s
   18   7.57347968e+05  7.36622138e+05  1.41e-04 1.06e-02  1.86e-02    35s
   19   7.54312255e+05  7.37567679e+05  1.18e-04 7.13e-03  1.50e-02    36s
   20   7.51520203e+05  7.37973515e+05  9.74e-05 5.43e-03  1.21e-02    37s
-  21   7.49378168e+05  7.38309620e+05  8.11e-05 4.35e-03  9.92e-03    38s
-  22   7.47280839e+05  7.38509332e+05  6.48e-05 3.54e-03  7.86e-03    39s
-  23   7.45826460e+05  7.38699156e+05  5.29e-05 2.82e-03  6.39e-03    40s
-  24   7.44519043e+05  7.38860905e+05  4.35e-05 2.21e-03  5.07e-03    41s
-  25   7.43725774e+05  7.39013530e+05  3.75e-05 1.70e-03  4.22e-03    42s
-  26   7.42759310e+05  7.39104072e+05  2.99e-05 1.40e-03  3.27e-03    43s
-  27   7.42254979e+05  7.39187586e+05  2.52e-05 1.14e-03  2.75e-03    44s
-  28   7.41872944e+05  7.39258984e+05  2.17e-05 9.24e-04  2.34e-03    44s
-  29   7.41332930e+05  7.39328088e+05  1.70e-05 7.24e-04  1.80e-03    45s
-  30   7.41017437e+05  7.39371305e+05  1.41e-05 6.03e-04  1.47e-03    46s
-  31   7.40749747e+05  7.39419093e+05  1.16e-05 4.76e-04  1.19e-03    47s
-  32   7.40469093e+05  7.39456164e+05  8.93e-06 3.81e-04  9.07e-04    48s
-  33   7.40347954e+05  7.39508952e+05  7.80e-06 2.59e-04  7.51e-04    49s
-  34   7.40241628e+05  7.39525063e+05  6.69e-06 2.16e-04  6.42e-04    50s
-  35   7.40093927e+05  7.39542057e+05  5.29e-06 1.72e-04  4.94e-04    51s
-  36   7.40023212e+05  7.39556114e+05  4.49e-06 1.41e-04  4.18e-04    52s
-  37   7.39933446e+05  7.39563310e+05  3.58e-06 1.22e-04  3.32e-04    53s
-  38   7.39848437e+05  7.39580834e+05  2.70e-06 9.10e-05  2.40e-04    54s
-  39   7.39811729e+05  7.39592122e+05  2.32e-06 6.92e-05  1.97e-04    55s
-  40   7.39777319e+05  7.39596285e+05  1.92e-06 5.98e-05  1.62e-04    56s
-  41   7.39741740e+05  7.39602196e+05  1.51e-06 4.20e-05  1.25e-04    56s
-  42   7.39718898e+05  7.39607376e+05  1.24e-06 3.01e-05  9.99e-05    57s
-  43   7.39696624e+05  7.39609893e+05  9.88e-07 2.41e-05  7.77e-05    58s
-  44   7.39679693e+05  7.39612024e+05  7.77e-07 1.91e-05  6.06e-05    59s
-  45   7.39670836e+05  7.39614698e+05  6.71e-07 1.42e-05  5.03e-05    60s
-  46   7.39657730e+05  7.39616394e+05  5.00e-07 1.04e-05  3.70e-05    61s
-  47   7.39649455e+05  7.39617700e+05  3.98e-07 7.56e-06  2.84e-05    62s
-  48   7.39640752e+05  7.39618338e+05  2.89e-07 6.27e-06  2.01e-05    63s
-  49   7.39638579e+05  7.39618962e+05  2.62e-07 5.06e-06  1.76e-05    64s
-  50   7.39634804e+05  7.39619537e+05  2.10e-07 3.94e-06  1.37e-05    65s
-  51   7.39630898e+05  7.39620160e+05  1.46e-07 2.80e-06  9.61e-06    66s
-  52   7.39629662e+05  7.39620414e+05  1.28e-07 2.36e-06  8.28e-06    67s
-  53   7.39627149e+05  7.39620652e+05  8.99e-08 2.00e-06  5.81e-06    67s
-  54   7.39625695e+05  7.39621057e+05  6.65e-08 1.30e-06  4.15e-06    68s
-  55   7.39624820e+05  7.39621349e+05  5.09e-08 8.11e-07  3.11e-06    69s
-  56   7.39624511e+05  7.39621360e+05  4.58e-08 7.92e-07  2.82e-06    70s
-  57   7.39624241e+05  7.39621478e+05  4.20e-08 6.21e-07  2.47e-06    70s
-  58   7.39623997e+05  7.39621534e+05  3.83e-08 5.38e-07  2.20e-06    71s
-  59   7.39623726e+05  7.39621560e+05  3.35e-08 4.96e-07  1.94e-06    72s
-  60   7.39623488e+05  7.39621641e+05  2.91e-08 3.83e-07  1.65e-06    73s
-  61   7.39623019e+05  7.39621733e+05  2.07e-08 2.46e-07  1.15e-06    74s
-  62   7.39622682e+05  7.39621785e+05  1.44e-08 1.61e-07  8.03e-07    75s
-  63   7.39622538e+05  7.39621798e+05  1.18e-08 1.42e-07  6.62e-07    76s
-  64   7.39622423e+05  7.39621839e+05  9.59e-09 7.74e-08  5.23e-07    76s
-  65   7.39622239e+05  7.39621864e+05  6.21e-09 3.96e-08  3.36e-07    77s
-  66   7.39622146e+05  7.39621884e+05  4.48e-09 9.86e-08  2.34e-07    78s
-  67   7.39622018e+05  7.39621889e+05  2.27e-09 5.40e-08  1.15e-07    79s
-  68   7.39621936e+05  7.39621894e+05  4.39e-09 9.74e-08  3.80e-08    80s
-  69   7.39621935e+05  7.39621894e+05  1.20e-08 8.88e-08  3.65e-08    80s
-  70   7.39621934e+05  7.39621895e+05  1.16e-08 8.02e-08  3.52e-08    81s
-  71   7.39621934e+05  7.39621895e+05  1.25e-08 8.05e-08  3.50e-08    81s
+  21   7.49378168e+05  7.38309620e+05  8.11e-05 4.35e-03  9.92e-03    39s
+  22   7.47280839e+05  7.38509332e+05  6.48e-05 3.54e-03  7.86e-03    40s
+  23   7.45826460e+05  7.38699156e+05  5.29e-05 2.82e-03  6.39e-03    41s
+  24   7.44519043e+05  7.38860905e+05  4.35e-05 2.21e-03  5.07e-03    42s
+  25   7.43725774e+05  7.39013530e+05  3.75e-05 1.70e-03  4.22e-03    43s
+  26   7.42759310e+05  7.39104072e+05  2.99e-05 1.40e-03  3.27e-03    44s
+  27   7.42254979e+05  7.39187586e+05  2.52e-05 1.14e-03  2.75e-03    46s
+  28   7.41872944e+05  7.39258984e+05  2.17e-05 9.24e-04  2.34e-03    47s
+  29   7.41332930e+05  7.39328088e+05  1.70e-05 7.24e-04  1.80e-03    48s
+  30   7.41017437e+05  7.39371305e+05  1.41e-05 6.03e-04  1.47e-03    49s
+  31   7.40749747e+05  7.39419093e+05  1.16e-05 4.76e-04  1.19e-03    50s
+  32   7.40469093e+05  7.39456164e+05  8.93e-06 3.81e-04  9.07e-04    51s
+  33   7.40347954e+05  7.39508952e+05  7.80e-06 2.59e-04  7.51e-04    52s
+  34   7.40241628e+05  7.39525063e+05  6.69e-06 2.16e-04  6.42e-04    53s
+  35   7.40093927e+05  7.39542057e+05  5.29e-06 1.72e-04  4.94e-04    54s
+  36   7.40023212e+05  7.39556114e+05  4.49e-06 1.41e-04  4.18e-04    55s
+  37   7.39933446e+05  7.39563310e+05  3.58e-06 1.22e-04  3.32e-04    56s
+  38   7.39848437e+05  7.39580834e+05  2.70e-06 9.10e-05  2.40e-04    57s
+  39   7.39811729e+05  7.39592122e+05  2.32e-06 6.92e-05  1.97e-04    58s
+  40   7.39777319e+05  7.39596285e+05  1.92e-06 5.98e-05  1.62e-04    59s
+  41   7.39741740e+05  7.39602196e+05  1.51e-06 4.20e-05  1.25e-04    60s
+  42   7.39718898e+05  7.39607376e+05  1.24e-06 3.01e-05  9.99e-05    61s
+  43   7.39696624e+05  7.39609893e+05  9.88e-07 2.41e-05  7.77e-05    62s
+  44   7.39679693e+05  7.39612024e+05  7.77e-07 1.91e-05  6.06e-05    63s
+  45   7.39670836e+05  7.39614698e+05  6.71e-07 1.42e-05  5.03e-05    64s
+  46   7.39657730e+05  7.39616394e+05  5.00e-07 1.04e-05  3.70e-05    65s
+  47   7.39649455e+05  7.39617700e+05  3.98e-07 7.56e-06  2.84e-05    66s
+  48   7.39640752e+05  7.39618338e+05  2.89e-07 6.27e-06  2.01e-05    66s
+  49   7.39638579e+05  7.39618962e+05  2.62e-07 5.06e-06  1.76e-05    67s
+  50   7.39634804e+05  7.39619537e+05  2.10e-07 3.94e-06  1.37e-05    68s
+  51   7.39630898e+05  7.39620160e+05  1.46e-07 2.80e-06  9.61e-06    69s
+  52   7.39629662e+05  7.39620414e+05  1.28e-07 2.36e-06  8.28e-06    70s
+  53   7.39627149e+05  7.39620652e+05  8.99e-08 2.00e-06  5.81e-06    71s
+  54   7.39625695e+05  7.39621057e+05  6.65e-08 1.30e-06  4.15e-06    72s
+  55   7.39624820e+05  7.39621349e+05  5.09e-08 8.11e-07  3.11e-06    73s
+  56   7.39624511e+05  7.39621360e+05  4.58e-08 7.92e-07  2.82e-06    74s
+  57   7.39624241e+05  7.39621478e+05  4.20e-08 6.21e-07  2.47e-06    74s
+  58   7.39623997e+05  7.39621534e+05  3.83e-08 5.38e-07  2.20e-06    75s
+  59   7.39623726e+05  7.39621560e+05  3.35e-08 4.96e-07  1.94e-06    76s
+  60   7.39623488e+05  7.39621641e+05  2.91e-08 3.83e-07  1.65e-06    77s
+  61   7.39623019e+05  7.39621733e+05  2.07e-08 2.46e-07  1.15e-06    78s
+  62   7.39622682e+05  7.39621785e+05  1.44e-08 1.61e-07  8.03e-07    79s
+  63   7.39622538e+05  7.39621798e+05  1.18e-08 1.42e-07  6.62e-07    80s
+  64   7.39622423e+05  7.39621839e+05  9.59e-09 7.74e-08  5.23e-07    81s
+  65   7.39622239e+05  7.39621864e+05  6.21e-09 3.96e-08  3.36e-07    83s
+  66   7.39622146e+05  7.39621884e+05  4.48e-09 9.86e-08  2.34e-07    84s
+  67   7.39622018e+05  7.39621889e+05  2.27e-09 5.40e-08  1.15e-07    85s
+  68   7.39621936e+05  7.39621894e+05  4.39e-09 9.74e-08  3.80e-08    86s
+  69   7.39621935e+05  7.39621894e+05  1.20e-08 8.88e-08  3.65e-08    87s
+  70   7.39621934e+05  7.39621895e+05  1.16e-08 8.02e-08  3.52e-08    87s
+  71   7.39621934e+05  7.39621895e+05  1.25e-08 8.05e-08  3.50e-08    88s
 
-Barrier solved model in 71 iterations and 81.46 seconds
+Barrier solved model in 71 iterations and 88.07 seconds
 Optimal objective 7.39621934e+05
 
 
 Root crossover log...
 
-  284969 variables added to crossover basis                       86s
-  300146 variables added to crossover basis                       90s
-  301716 variables added to crossover basis                       95s
-  302520 variables added to crossover basis                      100s
-  303184 variables added to crossover basis                      105s
-  303708 variables added to crossover basis                      110s
-  304207 variables added to crossover basis                      115s
-  304665 variables added to crossover basis                      120s
-  305043 variables added to crossover basis                      125s
-  305390 variables added to crossover basis                      130s
-  305707 variables added to crossover basis                      135s
-  305991 variables added to crossover basis                      140s
-  306246 variables added to crossover basis                      145s
-  306471 variables added to crossover basis                      150s
-  306694 variables added to crossover basis                      155s
-  306916 variables added to crossover basis                      161s
-  307109 variables added to crossover basis                      165s
-  307309 variables added to crossover basis                      170s
-  307502 variables added to crossover basis                      175s
-  307700 variables added to crossover basis                      181s
-  307868 variables added to crossover basis                      185s
-  308061 variables added to crossover basis                      191s
-  308226 variables added to crossover basis                      196s
-  308395 variables added to crossover basis                      201s
-  308534 variables added to crossover basis                      205s
-  308701 variables added to crossover basis                      210s
-  308869 variables added to crossover basis                      216s
-  309013 variables added to crossover basis                      220s
-  309157 variables added to crossover basis                      225s
-  309322 variables added to crossover basis                      231s
-  309459 variables added to crossover basis                      235s
-  309605 variables added to crossover basis                      240s
-  309745 variables added to crossover basis                      245s
-  309883 variables added to crossover basis                      250s
-  310026 variables added to crossover basis                      255s
-  310166 variables added to crossover basis                      260s
-  310312 variables added to crossover basis                      265s
-  310453 variables added to crossover basis                      271s
-  310590 variables added to crossover basis                      276s
-  310695 variables added to crossover basis                      280s
-  310838 variables added to crossover basis                      286s
-  310947 variables added to crossover basis                      291s
-  311061 variables added to crossover basis                      295s
+  284969 variables added to crossover basis                       93s
+  299465 variables added to crossover basis                       95s
+  301481 variables added to crossover basis                      100s
+  302405 variables added to crossover basis                      105s
+  303098 variables added to crossover basis                      110s
+  303648 variables added to crossover basis                      115s
+  304147 variables added to crossover basis                      120s
+  304608 variables added to crossover basis                      125s
+  305014 variables added to crossover basis                      130s
+  305361 variables added to crossover basis                      135s
+  305650 variables added to crossover basis                      140s
+  305932 variables added to crossover basis                      145s
+  306191 variables added to crossover basis                      150s
+  306415 variables added to crossover basis                      155s
+  306640 variables added to crossover basis                      160s
+  306862 variables added to crossover basis                      165s
+  307081 variables added to crossover basis                      171s
+  307280 variables added to crossover basis                      176s
+  307450 variables added to crossover basis                      180s
+  307643 variables added to crossover basis                      185s
+  307812 variables added to crossover basis                      190s
+  308005 variables added to crossover basis                      196s
+  308170 variables added to crossover basis                      201s
+  308338 variables added to crossover basis                      206s
+  308506 variables added to crossover basis                      211s
+  308644 variables added to crossover basis                      215s
+  308812 variables added to crossover basis                      221s
+  308954 variables added to crossover basis                      225s
+  309128 variables added to crossover basis                      231s
+  309269 variables added to crossover basis                      236s
+  309405 variables added to crossover basis                      240s
+  309546 variables added to crossover basis                      245s
+  309718 variables added to crossover basis                      251s
+  309855 variables added to crossover basis                      256s
+  309998 variables added to crossover basis                      261s
+  310109 variables added to crossover basis                      265s
+  310252 variables added to crossover basis                      270s
+  310397 variables added to crossover basis                      276s
+  310533 variables added to crossover basis                      281s
+  310645 variables added to crossover basis                      285s
+  310782 variables added to crossover basis                      291s
+  310894 variables added to crossover basis                      295s
 
 
-Root relaxation: interrupted, 0 iterations, 287.01 seconds
+Root relaxation: interrupted, 0 iterations, 287.49 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
      0     0          -    0      1021783.00    0.00000   100%     -  300s
 
-Explored 0 nodes (0 simplex iterations) in 300.35 seconds
+Explored 0 nodes (0 simplex iterations) in 300.30 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 1: 1.02178e+06 
@@ -171,7 +170,6 @@ Solution count 1: 1.02178e+06
 Time limit reached
 Best objective 1.021783000000e+06, best bound 0.000000000000e+00, gap 100.0000%
 
-User-callback calls 18471, time in user-callback 0.16 sec
-['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Result: runtime=300.29sec; objective=1021783; gap=1.0000%
+User-callback calls 19262, time in user-callback 0.28 sec
+Result: runtime=300.25sec; objective=1021783; gap=100.0000%
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instSingle_I30_J1000_T12_1_result.txt

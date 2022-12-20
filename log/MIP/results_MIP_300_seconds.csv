@@ -1,76 +1,76 @@
-log/MIP/log_instMulti_I10_J50_T3_0.txt:Optimal Result: runtime=0.23sec; objective=34325; gap=0.0000%
+log/MIP/log_instMulti_I10_J50_T3_0.txt:Optimal Result: runtime=0.24sec; objective=34325; gap=0.0000%
 log/MIP/log_instMulti_I10_J50_T3_1.txt:Optimal Result: runtime=0.14sec; objective=36519; gap=0.0000%
-log/MIP/log_instMulti_I20_J1000_T8_0.txt:Result: runtime=271.90sec; objective=718670; gap=0.0026%
-log/MIP/log_instMulti_I20_J1000_T8_1.txt:Result: runtime=285.45sec; objective=797646; gap=0.0072%
-log/MIP/log_instMulti_I20_J100_T4_0.txt:Optimal Result: runtime=0.53sec; objective=67925; gap=0.0000%
+log/MIP/log_instMulti_I20_J1000_T8_0.txt:Result: runtime=269.39sec; objective=718670; gap=0.2600%
+log/MIP/log_instMulti_I20_J1000_T8_1.txt:Result: runtime=284.80sec; objective=797646; gap=0.7156%
+log/MIP/log_instMulti_I20_J100_T4_0.txt:Optimal Result: runtime=0.51sec; objective=67925; gap=0.0000%
 log/MIP/log_instMulti_I20_J100_T4_1.txt:Optimal Result: runtime=0.32sec; objective=108492; gap=0.0000%
-log/MIP/log_instMulti_I20_J100_T8_0.txt:Optimal Result: runtime=5.65sec; objective=126472; gap=0.0000%
-log/MIP/log_instMulti_I20_J100_T8_1.txt:Optimal Result: runtime=21.59sec; objective=113586; gap=0.0001%
-log/MIP/log_instMulti_I20_J250_T4_0.txt:Optimal Result: runtime=46.43sec; objective=110531; gap=0.0000%
-log/MIP/log_instMulti_I20_J250_T4_1.txt:Optimal Result: runtime=1.63sec; objective=231085; gap=0.0000%
-log/MIP/log_instMulti_I20_J250_T8_0.txt:Result: runtime=300.01sec; objective=229872; gap=0.0035%
-log/MIP/log_instMulti_I20_J250_T8_1.txt:Result: runtime=300.03sec; objective=205247; gap=0.0003%
-log/MIP/log_instMulti_I30_J1000_T12_0.txt:Result: runtime=280.05sec; objective=1004033; gap=0.0234%
-log/MIP/log_instMulti_I30_J1000_T12_1.txt:Result: runtime=300.01sec; objective=1210809; gap=0.0116%
-log/MIP/log_instMulti_I30_J1000_T8_0.txt:Result: runtime=272.31sec; objective=711226; gap=0.0239%
-log/MIP/log_instMulti_I30_J1000_T8_1.txt:Result: runtime=297.93sec; objective=1164861; gap=0.0064%
-log/MIP/log_instMulti_I30_J250_T12_0.txt:Result: runtime=300.05sec; objective=310252; gap=0.0633%
-log/MIP/log_instMulti_I30_J250_T12_1.txt:Result: runtime=300.02sec; objective=276620; gap=0.0300%
-log/MIP/log_instMulti_I30_J250_T4_0.txt:Optimal Result: runtime=8.63sec; objective=264690; gap=0.0000%
-log/MIP/log_instMulti_I30_J250_T4_1.txt:Optimal Result: runtime=6.69sec; objective=319936; gap=0.0001%
-log/MIP/log_instMulti_I30_J250_T8_0.txt:Optimal Result: runtime=17.68sec; objective=344203; gap=0.0000%
-log/MIP/log_instMulti_I30_J250_T8_1.txt:Optimal Result: runtime=8.93sec; objective=356601; gap=0.0000%
-log/MIP/log_instMulti_I30_J500_T12_0.txt:Result: runtime=300.02sec; objective=620885; gap=0.0123%
-log/MIP/log_instMulti_I30_J500_T12_1.txt:Result: runtime=294.95sec; objective=620104; gap=0.0083%
-log/MIP/log_instMulti_I30_J500_T8_0.txt:Result: runtime=283.87sec; objective=392735; gap=0.0177%
-log/MIP/log_instMulti_I30_J500_T8_1.txt:Result: runtime=300.03sec; objective=396201; gap=0.0063%
-log/MIP/log_instMulti_I50_J1000_T12_0.txt:Result: runtime=246.06sec; objective=1576999; gap=0.0149%
-log/MIP/log_instMulti_I50_J1000_T12_1.txt:Result: runtime=283.97sec; objective=1544852; gap=0.0111%
-log/MIP/log_instMulti_I50_J1000_T8_0.txt:Optimal Result: runtime=205.39sec; objective=1194010; gap=0.0001%
-log/MIP/log_instMulti_I50_J1000_T8_1.txt:Result: runtime=296.80sec; objective=1770725; gap=0.0002%
-log/MIP/log_instMulti_I50_J250_T12_0.txt:Result: runtime=297.57sec; objective=519762; gap=0.0561%
-log/MIP/log_instMulti_I50_J250_T12_1.txt:Optimal Result: runtime=75.51sec; objective=542527; gap=0.0001%
-log/MIP/log_instMulti_I50_J250_T8_0.txt:Result: runtime=289.93sec; objective=370637; gap=0.0123%
-log/MIP/log_instMulti_I50_J250_T8_1.txt:Result: runtime=300.00sec; objective=269988; gap=0.0022%
-log/MIP/log_instMulti_I50_J500_T12_0.txt:Result: runtime=268.82sec; objective=530544; gap=0.0391%
-log/MIP/log_instMulti_I50_J500_T12_1.txt:Result: runtime=282.69sec; objective=869707; gap=0.0127%
-log/MIP/log_instMulti_I50_J500_T8_0.txt:Optimal Result: runtime=186.40sec; objective=618087; gap=0.0000%
-log/MIP/log_instMulti_I50_J500_T8_1.txt:Optimal Result: runtime=211.71sec; objective=953452; gap=0.0000%
+log/MIP/log_instMulti_I20_J100_T8_0.txt:Optimal Result: runtime=5.89sec; objective=126472; gap=0.0000%
+log/MIP/log_instMulti_I20_J100_T8_1.txt:Optimal Result: runtime=23.27sec; objective=113586; gap=0.0001%
+log/MIP/log_instMulti_I20_J250_T4_0.txt:Optimal Result: runtime=50.92sec; objective=110531; gap=0.0000%
+log/MIP/log_instMulti_I20_J250_T4_1.txt:Optimal Result: runtime=2.44sec; objective=231099; gap=0.0001%
+log/MIP/log_instMulti_I20_J250_T8_0.txt:Result: runtime=300.02sec; objective=229872; gap=0.3498%
+log/MIP/log_instMulti_I20_J250_T8_1.txt:Result: runtime=300.03sec; objective=205247; gap=0.0429%
+log/MIP/log_instMulti_I30_J1000_T12_0.txt:Result: runtime=278.87sec; objective=1004033; gap=2.3426%
+log/MIP/log_instMulti_I30_J1000_T12_1.txt:Result: runtime=179.72sec; objective=1210809; gap=1.1610%
+log/MIP/log_instMulti_I30_J1000_T8_0.txt:Result: runtime=265.64sec; objective=711226; gap=2.3899%
+log/MIP/log_instMulti_I30_J1000_T8_1.txt:Result: runtime=300.00sec; objective=1164861; gap=0.6358%
+log/MIP/log_instMulti_I30_J250_T12_0.txt:Result: runtime=300.03sec; objective=310252; gap=6.3297%
+log/MIP/log_instMulti_I30_J250_T12_1.txt:Result: runtime=300.02sec; objective=276620; gap=2.9958%
+log/MIP/log_instMulti_I30_J250_T4_0.txt:Optimal Result: runtime=9.26sec; objective=264690; gap=0.0000%
+log/MIP/log_instMulti_I30_J250_T4_1.txt:Optimal Result: runtime=7.73sec; objective=319936; gap=0.0001%
+log/MIP/log_instMulti_I30_J250_T8_0.txt:Optimal Result: runtime=20.31sec; objective=344203; gap=0.0000%
+log/MIP/log_instMulti_I30_J250_T8_1.txt:Optimal Result: runtime=9.26sec; objective=356601; gap=0.0000%
+log/MIP/log_instMulti_I30_J500_T12_0.txt:Result: runtime=300.10sec; objective=620885; gap=1.2140%
+log/MIP/log_instMulti_I30_J500_T12_1.txt:Result: runtime=291.39sec; objective=620104; gap=0.8258%
+log/MIP/log_instMulti_I30_J500_T8_0.txt:Result: runtime=280.42sec; objective=392735; gap=1.7681%
+log/MIP/log_instMulti_I30_J500_T8_1.txt:Result: runtime=300.02sec; objective=396201; gap=0.6280%
+log/MIP/log_instMulti_I50_J1000_T12_0.txt:Result: runtime=239.02sec; objective=1576999; gap=1.4863%
+log/MIP/log_instMulti_I50_J1000_T12_1.txt:Result: runtime=294.76sec; objective=1544956; gap=1.1161%
+log/MIP/log_instMulti_I50_J1000_T8_0.txt:Optimal Result: runtime=201.37sec; objective=1194010; gap=0.0001%
+log/MIP/log_instMulti_I50_J1000_T8_1.txt:Result: runtime=300.00sec; objective=1770725; gap=0.0208%
+log/MIP/log_instMulti_I50_J250_T12_0.txt:Result: runtime=299.07sec; objective=519762; gap=5.6073%
+log/MIP/log_instMulti_I50_J250_T12_1.txt:Optimal Result: runtime=78.33sec; objective=542527; gap=0.0001%
+log/MIP/log_instMulti_I50_J250_T8_0.txt:Result: runtime=290.98sec; objective=370637; gap=1.2278%
+log/MIP/log_instMulti_I50_J250_T8_1.txt:Result: runtime=294.09sec; objective=269988; gap=0.2208%
+log/MIP/log_instMulti_I50_J500_T12_0.txt:Result: runtime=270.13sec; objective=530544; gap=3.9080%
+log/MIP/log_instMulti_I50_J500_T12_1.txt:Result: runtime=300.00sec; objective=869707; gap=1.2728%
+log/MIP/log_instMulti_I50_J500_T8_0.txt:Optimal Result: runtime=180.99sec; objective=618087; gap=0.0000%
+log/MIP/log_instMulti_I50_J500_T8_1.txt:Optimal Result: runtime=205.55sec; objective=953452; gap=0.0000%
 log/MIP/log_instSingle_I10_J50_T3_0.txt:Optimal Result: runtime=0.14sec; objective=23202; gap=0.0000%
-log/MIP/log_instSingle_I10_J50_T3_1.txt:Optimal Result: runtime=0.13sec; objective=24133; gap=0.0000%
-log/MIP/log_instSingle_I20_J1000_T8_0.txt:Result: runtime=300.03sec; objective=531288; gap=0.0258%
-log/MIP/log_instSingle_I20_J1000_T8_1.txt:Result: runtime=294.69sec; objective=517860; gap=0.0141%
-log/MIP/log_instSingle_I20_J100_T4_0.txt:Optimal Result: runtime=3.15sec; objective=44477; gap=0.0000%
-log/MIP/log_instSingle_I20_J100_T4_1.txt:Optimal Result: runtime=4.69sec; objective=43432; gap=0.0000%
-log/MIP/log_instSingle_I20_J100_T8_0.txt:Optimal Result: runtime=207.87sec; objective=80097; gap=0.0000%
-log/MIP/log_instSingle_I20_J100_T8_1.txt:Optimal Result: runtime=23.41sec; objective=79268; gap=0.0000%
-log/MIP/log_instSingle_I20_J250_T4_0.txt:Optimal Result: runtime=207.87sec; objective=86069; gap=0.0000%
-log/MIP/log_instSingle_I20_J250_T4_1.txt:Optimal Result: runtime=108.56sec; objective=88165; gap=0.0000%
-log/MIP/log_instSingle_I20_J250_T8_0.txt:Result: runtime=300.01sec; objective=156867; gap=0.0178%
-log/MIP/log_instSingle_I20_J250_T8_1.txt:Result: runtime=300.18sec; objective=153778; gap=0.0079%
-log/MIP/log_instSingle_I30_J1000_T12_0.txt:Result: runtime=300.01sec; objective=763448; gap=0.0409%
-log/MIP/log_instSingle_I30_J1000_T12_1.txt:Result: runtime=300.29sec; objective=1021783; gap=1.0000%
-log/MIP/log_instSingle_I30_J1000_T8_0.txt:Result: runtime=209.02sec; objective=538790; gap=0.0623%
-log/MIP/log_instSingle_I30_J1000_T8_1.txt:Result: runtime=264.79sec; objective=534269; gap=0.0581%
-log/MIP/log_instSingle_I30_J250_T12_0.txt:Result: runtime=300.01sec; objective=220905; gap=0.0299%
-log/MIP/log_instSingle_I30_J250_T12_1.txt:Result: runtime=290.39sec; objective=231221; gap=0.0563%
-log/MIP/log_instSingle_I30_J250_T4_0.txt:Result: runtime=300.00sec; objective=86451; gap=0.0038%
-log/MIP/log_instSingle_I30_J250_T4_1.txt:Result: runtime=300.09sec; objective=85118; gap=0.0039%
-log/MIP/log_instSingle_I30_J250_T8_0.txt:Result: runtime=300.04sec; objective=151186; gap=0.0118%
-log/MIP/log_instSingle_I30_J250_T8_1.txt:Result: runtime=300.33sec; objective=157002; gap=0.0356%
-log/MIP/log_instSingle_I30_J500_T12_0.txt:Result: runtime=300.00sec; objective=412524; gap=0.0682%
-log/MIP/log_instSingle_I30_J500_T12_1.txt:Result: runtime=165.17sec; objective=421898; gap=0.0739%
-log/MIP/log_instSingle_I30_J500_T8_0.txt:Result: runtime=160.43sec; objective=293992; gap=0.0714%
-log/MIP/log_instSingle_I30_J500_T8_1.txt:Result: runtime=300.01sec; objective=290472; gap=0.0595%
-log/MIP/log_instSingle_I50_J1000_T12_0.txt:Result: runtime=210.08sec; objective=789867; gap=0.0828%
-log/MIP/log_instSingle_I50_J1000_T12_1.txt:Result: runtime=300.02sec; objective=1002123; gap=0.2799%
-log/MIP/log_instSingle_I50_J1000_T8_0.txt:Result: runtime=291.29sec; objective=510800; gap=0.0447%
-log/MIP/log_instSingle_I50_J1000_T8_1.txt:Result: runtime=198.04sec; objective=541740; gap=0.0737%
-log/MIP/log_instSingle_I50_J250_T12_0.txt:Result: runtime=300.01sec; objective=229406; gap=0.0518%
-log/MIP/log_instSingle_I50_J250_T12_1.txt:Result: runtime=295.02sec; objective=228851; gap=0.0524%
-log/MIP/log_instSingle_I50_J250_T8_0.txt:Result: runtime=220.28sec; objective=158055; gap=0.0526%
-log/MIP/log_instSingle_I50_J250_T8_1.txt:Result: runtime=300.04sec; objective=161124; gap=0.0593%
-log/MIP/log_instSingle_I50_J500_T12_0.txt:Result: runtime=270.66sec; objective=407385; gap=0.0541%
-log/MIP/log_instSingle_I50_J500_T12_1.txt:Result: runtime=276.86sec; objective=421229; gap=0.0860%
-log/MIP/log_instSingle_I50_J500_T8_0.txt:Result: runtime=286.81sec; objective=286869; gap=0.0663%
-log/MIP/log_instSingle_I50_J500_T8_1.txt:Result: runtime=192.63sec; objective=278307; gap=0.0395%
+log/MIP/log_instSingle_I10_J50_T3_1.txt:Optimal Result: runtime=0.12sec; objective=24133; gap=0.0000%
+log/MIP/log_instSingle_I20_J1000_T8_0.txt:Result: runtime=290.56sec; objective=531134; gap=2.5539%
+log/MIP/log_instSingle_I20_J1000_T8_1.txt:Result: runtime=283.29sec; objective=517860; gap=1.4129%
+log/MIP/log_instSingle_I20_J100_T4_0.txt:Optimal Result: runtime=3.22sec; objective=44477; gap=0.0000%
+log/MIP/log_instSingle_I20_J100_T4_1.txt:Optimal Result: runtime=4.82sec; objective=43432; gap=0.0000%
+log/MIP/log_instSingle_I20_J100_T8_0.txt:Optimal Result: runtime=212.00sec; objective=80097; gap=0.0000%
+log/MIP/log_instSingle_I20_J100_T8_1.txt:Optimal Result: runtime=21.98sec; objective=79268; gap=0.0000%
+log/MIP/log_instSingle_I20_J250_T4_0.txt:Optimal Result: runtime=211.20sec; objective=86069; gap=0.0000%
+log/MIP/log_instSingle_I20_J250_T4_1.txt:Optimal Result: runtime=108.68sec; objective=88165; gap=0.0000%
+log/MIP/log_instSingle_I20_J250_T8_0.txt:Result: runtime=300.01sec; objective=156867; gap=1.7837%
+log/MIP/log_instSingle_I20_J250_T8_1.txt:Result: runtime=300.20sec; objective=153778; gap=0.7908%
+log/MIP/log_instSingle_I30_J1000_T12_0.txt:Result: runtime=300.01sec; objective=764049; gap=4.1657%
+log/MIP/log_instSingle_I30_J1000_T12_1.txt:Result: runtime=300.25sec; objective=1021783; gap=100.0000%
+log/MIP/log_instSingle_I30_J1000_T8_0.txt:Result: runtime=209.58sec; objective=538790; gap=6.2273%
+log/MIP/log_instSingle_I30_J1000_T8_1.txt:Result: runtime=252.80sec; objective=534269; gap=5.8073%
+log/MIP/log_instSingle_I30_J250_T12_0.txt:Result: runtime=300.02sec; objective=220905; gap=2.9900%
+log/MIP/log_instSingle_I30_J250_T12_1.txt:Result: runtime=300.01sec; objective=231221; gap=5.6297%
+log/MIP/log_instSingle_I30_J250_T4_0.txt:Result: runtime=299.81sec; objective=86451; gap=0.3840%
+log/MIP/log_instSingle_I30_J250_T4_1.txt:Result: runtime=300.08sec; objective=85118; gap=0.3853%
+log/MIP/log_instSingle_I30_J250_T8_0.txt:Result: runtime=300.01sec; objective=151186; gap=1.1826%
+log/MIP/log_instSingle_I30_J250_T8_1.txt:Result: runtime=300.26sec; objective=157002; gap=3.5586%
+log/MIP/log_instSingle_I30_J500_T12_0.txt:Result: runtime=300.03sec; objective=412524; gap=6.8219%
+log/MIP/log_instSingle_I30_J500_T12_1.txt:Result: runtime=164.44sec; objective=421898; gap=7.3909%
+log/MIP/log_instSingle_I30_J500_T8_0.txt:Result: runtime=162.30sec; objective=293992; gap=7.1366%
+log/MIP/log_instSingle_I30_J500_T8_1.txt:Result: runtime=300.01sec; objective=290472; gap=5.9482%
+log/MIP/log_instSingle_I50_J1000_T12_0.txt:Result: runtime=221.91sec; objective=789867; gap=8.2809%
+log/MIP/log_instSingle_I50_J1000_T12_1.txt:Result: runtime=277.72sec; objective=769770; gap=6.2530%
+log/MIP/log_instSingle_I50_J1000_T8_0.txt:Result: runtime=292.76sec; objective=510800; gap=4.4734%
+log/MIP/log_instSingle_I50_J1000_T8_1.txt:Result: runtime=211.94sec; objective=541740; gap=7.3672%
+log/MIP/log_instSingle_I50_J250_T12_0.txt:Result: runtime=300.01sec; objective=229406; gap=5.1808%
+log/MIP/log_instSingle_I50_J250_T12_1.txt:Result: runtime=297.49sec; objective=228851; gap=5.2383%
+log/MIP/log_instSingle_I50_J250_T8_0.txt:Result: runtime=218.86sec; objective=158055; gap=5.2627%
+log/MIP/log_instSingle_I50_J250_T8_1.txt:Result: runtime=300.01sec; objective=161124; gap=5.9284%
+log/MIP/log_instSingle_I50_J500_T12_0.txt:Result: runtime=262.13sec; objective=407385; gap=5.4096%
+log/MIP/log_instSingle_I50_J500_T12_1.txt:Result: runtime=280.23sec; objective=421229; gap=8.6036%
+log/MIP/log_instSingle_I50_J500_T8_0.txt:Result: runtime=286.67sec; objective=286869; gap=6.6340%
+log/MIP/log_instSingle_I50_J500_T8_1.txt:Result: runtime=194.12sec; objective=278307; gap=3.9518%

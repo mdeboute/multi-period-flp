@@ -51,6 +51,5 @@ Optimal solution found (tolerance 1.00e-04)
 Best objective 3.651900000000e+04, best bound 3.651900000000e+04, gap 0.0000%
 
 User-callback calls 134, time in user-callback 0.00 sec
-['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
 Optimal Result: runtime=0.14sec; objective=36519; gap=0.0000%
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I10_J50_T3_1_result.txt

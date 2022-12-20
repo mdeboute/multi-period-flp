@@ -9,7 +9,7 @@ Coefficient statistics:
   Bounds range     [1e+00, 1e+00]
   RHS range        [1e+00, 1e+02]
 Presolve removed 20 rows and 20 columns
-Presolve time: 0.21s
+Presolve time: 0.22s
 Presolved: 17676 rows, 16300 columns, 92740 nonzeros
 Variable types: 0 continuous, 16300 integer (16300 binary)
 Found heuristic solution: objective 141251.00000
@@ -69,18 +69,18 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
   36   1.26427659e+05  1.26427648e+05  9.09e-10 4.27e-06  2.35e-07     1s
   37   1.26427650e+05  1.26427650e+05  7.32e-10 8.58e-09  3.78e-10     1s
 
-Barrier solved model in 37 iterations and 1.25 seconds
+Barrier solved model in 37 iterations and 1.34 seconds
 Optimal objective 1.26427650e+05
 
 
 Solved with barrier
 
-Root relaxation: objective 1.264276e+05, 1195 iterations, 1.02 seconds
+Root relaxation: objective 1.264276e+05, 1195 iterations, 1.09 seconds
 
     Nodes    |    Current Node    |     Objective Bounds      |     Work
  Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-     0     0 126427.650    0 1135 141251.000 126427.650  10.5%     -    1s
+     0     0 126427.650    0 1135 141251.000 126427.650  10.5%     -    2s
 H    0     0                    127946.00000 126427.650  1.19%     -    2s
 H    0     0                    126549.00000 126427.650  0.10%     -    2s
 H    0     0                    126497.00000 126427.650  0.05%     -    2s
@@ -92,7 +92,7 @@ H    0     0                    126472.00000 126451.500  0.02%     -    5s
 Cutting planes:
   Zero half: 31
 
-Explored 1 nodes (4026 simplex iterations) in 5.65 seconds
+Explored 1 nodes (4026 simplex iterations) in 5.91 seconds
 Thread count was 16 (of 16 available processors)
 
 Solution count 6: 126472 126497 126497 ... 141251
@@ -100,7 +100,6 @@ Solution count 6: 126472 126497 126497 ... 141251
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.264720000000e+05, best bound 1.264720000000e+05, gap 0.0000%
 
-User-callback calls 1496, time in user-callback 0.02 sec
-['/opt/local/stow/gurobi910/linux64/lib/libgurobi91.so']
-Optimal Result: runtime=5.65sec; objective=126472; gap=0.0000%
+User-callback calls 1487, time in user-callback 0.02 sec
+Optimal Result: runtime=5.89sec; objective=126472; gap=0.0000%
 Solution written to /autofs/unityaccount/cremi/mdeboute/Bureau/multi-period-flp/solution//instMulti_I20_J100_T8_0_result.txt
