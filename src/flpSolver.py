@@ -8,7 +8,7 @@ def main():
     argv = sys.argv[1:]
 
     if len(argv) < 2 or len(argv) > 3:
-        print("Usage: python3 main.py <instance_file> <method> (<time_limit_sec>)")
+        print("Usage: python3 flpSolver.py <instance_file> <method> (<time_limit_sec>)")
         print("Where <method> is one of: MIP or H")
         print("<time_limit> is optional, its default value is set to 600 seconds")
         exit(1)
